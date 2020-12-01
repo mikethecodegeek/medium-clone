@@ -1,13 +1,19 @@
 extends layout
 block content 
-  form(method="post" action="/users/new")
-    input(type="hidden" name="_csrf" value=csrfToken)
-    label(for="userName") Enter A Username
-    input(type="text" name="userName")
-    label(for="email") Enter Your Email
-    input(type="text" name='email')
-    label(for="password") Password
-    input(type="text" name='password')
-    label(for="confirm_password") Confirm Password
-    input(type="text" name="confirm_password")
-    button(type="submit" value='Submit') Submit
+  title= title
+  h1= title
+    form(method="post" action="/users/new")
+      input(type="hidden" name="_csrf" value=csrfToken)
+      label(for="firstName") Enter A Firstname
+      input(type="text" name="firstName")
+      label(for="lastName") Enter A Lastname
+      input(type="text" name="lastName")
+      label(for="userName") Enter A Username
+      input(type="text" name="userName")
+      label(for="email") Enter Your Email
+      input(type="text" name='email')
+      label(for="password") Password
+      input(type="text" name='password')
+      label(for="confirm_password") Confirm Password
+      input(type="text" name="confirm_password")
+      button(type="submit" value='Submit') Submit
