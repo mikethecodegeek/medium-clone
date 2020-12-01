@@ -1,6 +1,6 @@
 extends layout
 block content 
-  form(method="post" action="/users/new")
+  form(method="post" action="/users/sign_in")
     input(type="hidden" name="_csrf" value=csrfToken)
     label(for="userName") Enter A Username
     input(type="text" name="userName")

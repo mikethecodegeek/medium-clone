@@ -30,22 +30,33 @@ router.post("/new", async (req, res) => {
 })
 
 router.get("/sign_in",(req, res) => {
-  res.render("signin");
+  res.render("sign_in");
 });
 
 router.post("/sign_in", async (req, res) => {
   const {userName,email,password} = req.body;
   console.log(userName,email,password)
   const errors = []
-  const newUser = await User.findOne({where: {email}});
-  if (!newUser) {
-    const err = new Error('Please try again');
-    res.redirect('/users/sign_in', {errors})
+  const user = await User.findOne({where: {email}});
+  if (!user) {
+    let err = new Error('Please try again');
+    // res.redirect('/users/sign_in', {err})
+    return res.send('no way')
   } else {
-    let hashedPassword = await bcrypt.hash(password, 10);
-    const user =await User.create({userName,email,hashedPassword})
-    req.session.user = user;
-    res.json({user});
+    let hash = user.hashedPassword;
+    await bcrypt.compare(password, hash, function(err, result) {
+      // result == true
+      // return res.send(result)
+      if (!result) {
+        let err = new Error('Please try again');
+        // res.redirect('/users/sign_in', {err})
+        return res.send(err)
+      } else {
+        req.session.user = user;
+        res.json({user});
+      }
+   });
+    
   }
 })
 
