@@ -1,0 +1,11 @@
+extends layout
+block content 
+  form(method="post" action="/users/new")
+    input(type="hidden" name="_csrf" value=csrfToken)
+    label(for="userName") Enter A Username
+    input(type="text" name="userName")
+    label(for="email") Enter Your Email
+    input(type="text" name='email')
+    label(for="password") Password
+    input(type="text" name='password')
+    button(type="submit" value='Submit') Submit
