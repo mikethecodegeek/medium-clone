@@ -12,3 +12,6 @@ module.exports = {
     seederStorage: 'sequelize',
   },
 };
+
+
+// This is a test
