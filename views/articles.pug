@@ -5,9 +5,10 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Submit Your Article
     body
-    input(type='hidden' name='_csrf' value=token)
-      h3= article.title
+        form(method='post' action='/articles')
+            input(type='hidden' name='_csrf' value=token)
+            input(name='title' type='text' placeholder='Enter Title')
             div
-                p= article.body
+            textarea(name='body' placeholder='Enter Poem')
             div
-            button(type='submit' value='submit') Submit
+                button(type='submit' value='submit') Submit
