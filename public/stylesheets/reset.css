@@ -25,3 +25,9 @@ body, header, nav {
 h1 {
   font-size: 2rem;
 }
+
+.signup { /*from signup.pug*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
