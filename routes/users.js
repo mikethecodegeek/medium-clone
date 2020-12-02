@@ -6,7 +6,7 @@ const { check, validationResult } = require('express-validator');
 
 const { User } = require('../db/models');
 const { loginUser } = require('../auth');
-/* GET users listing. */
+
 router.get('/', async function (req, res, next) {
     const users = await User.findAll();
     res.json({ users });
@@ -86,16 +86,9 @@ router.post(
             confirmedPassword,
         } = req.body;
 
-        console.log(1);
-
         const validatorErrors = validationResult(req);
 
-        console.log(2);
-        // console.log(validationResult)
-
         if (validatorErrors.isEmpty()) {
-            console.log(3);
-
             const hashedPassword = await bcrypt.hash(password, 10);
             const user = await User.create({
                 firstName,
@@ -109,8 +102,6 @@ router.post(
             res.json({ user });
             // res.redirect('/')
         } else {
-            console.log(4);
-
             const errors = validatorErrors.array().map((error) => {
                 console.log(error.msg);
                 return error.msg;
@@ -190,8 +181,8 @@ router.post(
 );
 
 router.post('/logout', (req, res) => {
-  logoutUser(req, res);
-  res.redirect('/');
+    logoutUser(req, res);
+    res.redirect('/');
 });
 
 module.exports = router;
