@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet' href='/stylesheets/reset.css')
+        title Submit Your Article
+    body
+      span
+        div
+            ul
+                each article in articles
+                    li
+                        h1= article.title
+                        p.body= article.body
