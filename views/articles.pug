@@ -5,7 +5,7 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Submit Your Article
     body
-        form(method='post' action='/articles')
+        form(method='post' action='/articles/new')
             input(type='hidden' name='_csrf' value=token)
             input(name='title' type='text' placeholder='Enter Title')
             div

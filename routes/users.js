@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 const { asyncHandler, csrfProtection } = require('./utils');
 const { check, validationResult } = require('express-validator');
 
-const { User } = require('../db/models');
+const { User, Article } = require('../db/models');
 const { loginUser, logoutUser } = require('../auth');
 
 router.get('/', async function (req, res, next) {
@@ -73,6 +73,13 @@ const userValidators = [
 router.get('/new', csrfProtection, (req, res) => {
     res.render('signup', { csrfToken: req.csrfToken(), user: {} });
 });
+
+router.get('/:id/articles', csrfProtection, asyncHandler( async (req, res) => {
+    const user = await User.findByPk(req.params.id, { include: Article })
+    const articles = user.Articles.map(article => {return {title: article.title, body: article.body}})
+    console.log(articles)
+    res.render('display', {articles} );
+}));
 
 router.post(
     '/new',
