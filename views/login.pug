@@ -8,9 +8,9 @@ block content
   form(method="post" action="/users/login")
     input(type="hidden" name="_csrf" value=csrfToken)
     label(for="userName") Enter A Username
-    input(type="text" name="userName" value=userName)
+    input(type="text" name="userName" id="userName" value=userName)
     br
     label(for="password") Password
-    input(type="text" name='password')
+    input(type="text" name="password" id="password")
     br
     button(type="submit" value='Submit') Submit
