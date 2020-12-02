@@ -5,10 +5,11 @@ const { asyncHandler, csrfProtection } = require('./utils');
 const { check, validationResult } = require('express-validator');
 
 const { User } = require('../db/models');
-const { loginUser } = require('../auth');
+const { loginUser, logoutUser } = require('../auth');
 
 router.get('/', async function (req, res, next) {
     const users = await User.findAll();
+    console.log(req.session.auth)
     res.json({ users });
 });
 
@@ -99,8 +100,8 @@ router.post(
             });
             loginUser(req, res, user);
             // req.session.user = user;
-            res.json({ user });
-            // res.redirect('/')
+            // res.json({ user });
+            res.redirect('/')
         } else {
             const errors = validatorErrors.array().map((error) => {
                 console.log(error.msg);
@@ -126,7 +127,16 @@ const loginValidators = [
         .exists({
             checkFalsy: true,
         })
-        .withMessage('Please provide a value for username'),
+        .withMessage('Please provide a value for username')
+        .custom((value) => {
+          return User.findOne({ where: { userName: value } }).then((user) => {
+              if (!user) {
+                  return Promise.reject(
+                      'User or password not correct'
+                  );
+              }
+          });
+      }),
     check('password')
         .exists({
             checkFalsy: true,
@@ -140,7 +150,7 @@ router.post(
     loginValidators,
     asyncHandler(async (req, res) => {
         const { userName, password } = req.body;
-
+        let errors = [];
         const validatorErrors = validationResult(req);
 
         if (validatorErrors.isEmpty()) {
@@ -164,8 +174,8 @@ router.post(
                         return res.redirect('/');
                     }
                 });
-            }
-        } else {
+            }}
+         else {
             errors = validatorErrors.array().map((err) => {
                 console.log(err.msg);
                 return err.msg;
@@ -177,10 +187,10 @@ router.post(
                 csrfToken: req.csrfToken(),
             });
         }
-    })
-);
+      }
+));
 
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
     logoutUser(req, res);
     res.redirect('/');
 });

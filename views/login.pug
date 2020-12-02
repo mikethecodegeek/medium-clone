@@ -1,16 +1,21 @@
 extends layout
 block content 
-  
-  if errors
-    ul
-      for error in errors
-        li=error
-  form(method="post" action="/users/login")
-    input(type="hidden" name="_csrf" value=csrfToken)
-    label(for="userName") Enter A Username
-    input(type="text" name="userName" id="userName" value=userName)
-    br
-    label(for="password") Password
-    input(type="text" name="password" id="password")
-    br
-    button(type="submit" value='Submit') Submit
+  div(id="myModal" class="modal")
+      div(class="modal-content")
+        p
+          a(href="/" class="modalClose") X 
+        p(class="modalTitle") Sign in to Medium 
+        if errors
+          ul
+            for error in errors
+              li(class='error')=error
+        form(method="post" action="/users/login")
+          input(type="hidden" name="_csrf" value=csrfToken)
+          //- label(for="userName") Enter A Username
+          div(class="modalInputFields")
+            input(class="modalInput" type="text" name="userName" id="userName" placeholder="Enter your username" value=userName)
+            br
+            //- label(for="password") Password
+            input(class="modalInput" type="password" name="password" placeholder="Enter Password" id="password")
+            br
+            button(class="modalSubmit" type="submit" value='Submit') Submit

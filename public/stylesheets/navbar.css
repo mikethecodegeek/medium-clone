@@ -1,0 +1,177 @@
+.navbar, .navlinks, .navlinks>ul {
+    display: flex;
+    /* justify-content: space-between; */
+    font-family: sans-serif;
+}
+
+.navbar {
+    justify-content: space-between;
+    height: 75px;
+    align-items: center;
+    background-color: #FFC017;
+    border-bottom: solid black thin;
+    padding-top: 5px;
+}
+.navlinks>ul {
+    list-style: none;
+    justify-content: space-evenly;
+    width: 350px;
+    margin-top: 5px;
+
+}
+
+.navlinks>ul>li,div {
+    font-size: .9rem;
+}
+
+#getStarted {
+    margin-right: 75px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -5px;
+    width: 105px;
+    text-align: center;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+#login {
+    text-decoration: none;
+    font-size: .9rem;
+    font-family: sans-serif;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-left: 90px;
+    font-weight: bold;
+    margin-top: -5px;
+}
+
+.modal {
+    
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  .modalTitle {
+      font-size: 1.4rem;
+      text-align: center;
+  }
+  .modalInputFields {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+  }
+
+  .modalInput {
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 500px;
+      border-top:none;
+      border-left: none;
+      border-right: none;
+      border-bottom: black 1px solid;
+  }
+
+  .modalSubmit {
+    /* margin-right: 75px; */
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 105px;
+    text-align: center;
+   
+  }
+
+  .error {
+      text-align: center;
+      text-decoration: none;
+      list-style: none;
+      color:red;
+  }
+
+  .modalClose {
+      text-decoration: none;
+  }
+
+  .hero {
+    background-color: #FFC017;
+    height: 400px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .hero > h1 {
+      color: black;
+      font-size: 4.7rem;
+      width: 450px;
+      margin-left: 45px;
+      padding-top: 30px;
+      line-height: 70px;
+      font-weight: 500;
+  }
+  .hero>p {
+      margin-left: 45px;
+      margin-top: 60px;
+      font-size: 1.3rem;
+      width: 650px;
+  }
+
+  .heroButton {
+    margin-left: 45px;
+    text-decoration: none;
+    border: 1px solid black;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    position: relative;
+    top: 10px;
+    width: 70px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  @media (max-width: 720px) {
+    .lg-only {
+        display: none;
+    }
+    .logo {
+        margin-left: 20px;
+    }
+    .navlinks>ul {
+        width: 100px
+    }
+    .hero>p {
+        word-wrap: break-word;
+        width: 90%
+    }
+    .hero>h1 {
+        font-size: 3rem;
+        line-height: 45px;
+        width: 350px;
+    }
+  }
+  

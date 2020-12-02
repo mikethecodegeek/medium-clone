@@ -4,5 +4,21 @@ html
       block head
         title="Medium Clone"
         link(rel='stylesheet' href='/stylesheets/reset.css')
+        link(rel="stylesheet", href="/stylesheets/navbar.css")
   body
+    div(class="navbar")
+      div(class="logo") Medium
+      div(class="navlinks")
+        ul
+          li(class="lg-only") Our Story
+          li(class="lg-only") Membership
+          li(class="lg-only") Write
+          if !session.auth
+            li 
+              a(href="/users/login" id="login" ) Login
+          if session.auth
+            li 
+              a(href="/users/logout" id="login" ) Logout  
+        if !session.auth      
+          a(href="/users/new" id="getStarted" class= 'get_started_button') Get Started       
     block content
