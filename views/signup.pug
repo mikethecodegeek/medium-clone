@@ -2,19 +2,35 @@ extends layout
 block content 
   title= title
   h1= title
-  div(class='signupForm')
-    form(method="post" action="/users/new")
-      input(type="hidden" name="_csrf" value=csrfToken)
-      label(for="firstName") Enter A Firstname
-      input(type="text" name="firstName")
-      label(for="lastName") Enter A Lastname
-      input(type="text" name="lastName")
-      label(for="userName") Enter A Username
-      input(type="text" name="userName")
-      label(for="email") Enter Your Email
-      input(type="text" name='email')
-      label(for="password") Password
-      input(type="text" name='password')
-      label(for="confirm_password") Confirm Password
-      input(type="text" name="confirm_password")
-      button(type="submit" value='Submit') Submit
+
+   div(id="myModal" class="modal")
+      div(class="modal-content")
+        span
+          a(href="/" class="modalClose") X
+        p(class="modalTitle") Join Medium
+        if errors
+          ul
+            for error in errors
+              li(class='error')=error
+        form(method="post" action="/users/new")
+          div(class="modalInputFields")
+            input(type="hidden" name="_csrf" value=csrfToken)
+            //- label(for="firstName") Enter A Firstname 
+            input(class="modalInput" type="text" name="firstName" placeholder="Enter First Name" value=user.firstName)
+            br
+            //- label(for="lastName") Enter A Lastname
+            input(class="modalInput" type="text" name="lastName" placeholder = "Enter Last Name" value=user.lastName)
+            br
+            //- label(for="userName") Enter A Username
+            input(class="modalInput" type="text" name="userName" placeholder="Enter Username" value=user.userName)
+            br
+            //- label(for="email") Enter Your Email
+            input(class="modalInput" type="email" name='email' placeholder="Enter Email" value=user.email)
+            br
+            //- label(for="password") Password
+            input(class="modalInput" type="password" name='password' placeholder="Enter Password")
+            br
+            //- label(for="confirmPassword") Confirm Password
+            input(class="modalInput" type="password" name="confirmPassword" placeholder="Confirm Password")
+            br
+            button(class="modalSubmit" type="submit" value='Submit') Submit
