@@ -8,9 +8,13 @@
     justify-content: space-between;
     height: 75px;
     align-items: center;
-    background-color: #FFC017;
     border-bottom: solid black thin;
     padding-top: 5px;
+}
+
+.yellow {
+    background-color: #FFC017;
+
 }
 .navlinks>ul {
     list-style: none;
@@ -45,7 +49,7 @@
 
 .logo {
     font-size: 2rem;
-    margin-left: 90px;
+    margin-left: 40px;
     font-weight: bold;
     margin-top: -5px;
 }
@@ -154,6 +158,36 @@
     border-radius: 5px;
     text-align: center;
   }
+
+  .greeting {
+      font-size: 1.5rem;
+      font-weight: bold;
+  }
+
+  .user-icon {
+      font-size: 1.5rem;
+      margin-left: auto;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
   @media (max-width: 720px) {
     .lg-only {
         display: none;

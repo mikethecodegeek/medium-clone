@@ -5,20 +5,32 @@ html
         title="Medium Clone"
         link(rel='stylesheet' href='/stylesheets/reset.css')
         link(rel="stylesheet", href="/stylesheets/navbar.css")
+        <script src="https://kit.fontawesome.com/1f57d4952c.js" crossorigin="anonymous"></script>
+
   body
-    div(class="navbar")
-      div(class="logo") Medium
-      div(class="navlinks")
-        ul
-          li(class="lg-only") Our Story
-          li(class="lg-only") Membership
-          li(class="lg-only") Write
-          if !session.auth
+    if !session.auth
+      div(class="navbar yellow")
+        div(class="logo") <i class="fas fa-crow"></i> Poedium
+        div(class="navlinks")
+          ul
+            li(class="lg-only") Our Story
+            li(class="lg-only") Membership
+            li(class="lg-only") Write
             li 
-              a(href="/users/login" id="login" ) Login
-          if session.auth
-            li 
-              a(href="/users/logout" id="login" ) Logout  
-        if !session.auth      
+                a(href="/users/login" id="login" ) Login     
           a(href="/users/new" id="getStarted" class= 'get_started_button') Get Started       
+    if session.auth
+      div(class="navbar")
+        div(class="logo") <i class="fas fa-crow"></i> Poedium
+        div(class="greeting lg-only") Hello #{session.auth.userName}
+        div(class="navlinks")
+          ul
+            //- li(class="lg-only") Our Story
+            //- li(class="lg-only") Membership
+            li(class="dropdown") 
+              <i class="fas fa-user user-icon"></i>
+              div(class="dropdown-content") 
+                a(href="/users/logout" id="logout" ) Logout 
+                  
+            
     block content

@@ -35,16 +35,7 @@ const userValidators = [
         .isLength({ max: 255 })
         .withMessage('Email Address must not be more than 255 characters long')
         .isEmail()
-        .withMessage('Email Address is not a valid email')
-        .custom((value) => {
-            return User.findOne({ where: { email: value } }).then((user) => {
-                if (user) {
-                    return Promise.reject(
-                        'The provided Email Address is already in use by another account'
-                    );
-                }
-            });
-        }),
+        .withMessage('Email Address is not a valid email'),
     check('password')
         .exists({ checkFalsy: true })
         .withMessage('Please provide a value for Password')
@@ -53,7 +44,17 @@ const userValidators = [
         .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/, 'g')
         .withMessage(
             'Password must contain at least 1 lowercase letter, uppercase letter, number, and special character (i.e. "!@#$%^&*")'
-        ),
+        )
+        .custom((value) => {
+          return User.findOne({ where: { userName: value } }).then((user) => {
+              if (user) {
+                  
+                  return Promise.reject(
+                      'The provided Email Address is already in use by another account'
+                  );
+              }
+          });
+      }),
     check('confirmPassword')
         .exists({ checkFalsy: true })
         .withMessage('Please provide a value for Confirm Password')
@@ -141,7 +142,25 @@ const loginValidators = [
         .exists({
             checkFalsy: true,
         })
-        .withMessage('Please provide a value for password'),
+        .withMessage('Please provide a value for password')
+        .custom((value) => {
+          return User.findOne({ where: { email: value } }).then(async (user) => {
+              if (user) {
+
+                  hash = user.hashedPassword;
+                  await bcrypt.compare(myPlaintextPassword, hash).then(function(result) {
+                    // result == true
+                    if (!result) {
+                      return Promise.reject(
+                        'User or password not correct'
+                      );
+
+                    }
+                  });
+                
+              }
+          });
+      }),
 ];
 
 router.post(
@@ -159,7 +178,8 @@ router.post(
                 let hash = user.hashedPassword;
                 await bcrypt.compare(password, hash, function (err, result) {
                     if (!result) {
-                        let err = new Error('Please try again');
+                        let err =  'User or password not correct';
+                        let errors = [err]
                         // res.redirect('/users/sign_in', {err})
                         // return res.send(err);
                         res.render('login', {
