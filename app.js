@@ -8,12 +8,14 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const bcrypt =  require('bcrypt')
 
 const app = express();
 
+
+app.use(cookieParser());
 // view engine setup
 app.set('view engine', 'pug');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -25,7 +27,7 @@ const store = new SequelizeStore({ db: sequelize });
 
 app.use(
   session({
-    secret: 'superSecret',
+    secret: '95aa672f-ba09-4186-ab9b-e9228307bf10',
     store,
     saveUninitialized: false,
     resave: false,
