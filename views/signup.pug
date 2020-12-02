@@ -2,18 +2,28 @@ extends layout
 block content 
   title= title
   h1= title
+    if errors
+      ul
+        for error in errors
+          li=error
     form(method="post" action="/users/new")
       input(type="hidden" name="_csrf" value=csrfToken)
-      label(for="firstName") Enter A Firstname
-      input(type="text" name="firstName")
+      label(for="firstName") Enter A Firstname 
+      input(type="text" name="firstName" value=user.firstName)
+      br
       label(for="lastName") Enter A Lastname
-      input(type="text" name="lastName")
+      input(type="text" name="lastName" value=user.lastName)
+      br
       label(for="userName") Enter A Username
-      input(type="text" name="userName")
+      input(type="text" name="userName" value=user.userName)
+      br
       label(for="email") Enter Your Email
-      input(type="text" name='email')
+      input(type="text" name='email' value=user.email)
+      br
       label(for="password") Password
       input(type="text" name='password')
-      label(for="confirm_password") Confirm Password
-      input(type="text" name="confirm_password")
+      br
+      label(for="confirmPassword") Confirm Password
+      input(type="text" name="confirmPassword")
+      br
       button(type="submit" value='Submit') Submit

@@ -1,11 +1,16 @@
 extends layout
 block content 
-  form(method="post" action="/users/sign_in")
+  
+  if errors
+    ul
+      for error in errors
+        li=error
+  form(method="post" action="/users/login")
     input(type="hidden" name="_csrf" value=csrfToken)
     label(for="userName") Enter A Username
-    input(type="text" name="userName")
-    label(for="email") Enter Your Email
-    input(type="text" name='email')
+    input(type="text" name="userName" value=userName)
+    br
     label(for="password") Password
     input(type="text" name='password')
+    br
     button(type="submit" value='Submit') Submit
