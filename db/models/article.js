@@ -12,9 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     );
     Article.associate = function (models) {
         // associations can be defined here
-        // Article.belongsTo(models.User, { foreignKey: 'userId' });
-        // Article.hasMany(models.Like, { foreignKey: 'articleId' });
-        // Article.hasMany(models.Comment, { foreignKey: 'articleId' });
+        Article.belongsTo(models.User, { foreignKey: 'userId' });
+        Article.hasMany(models.Like, { foreignKey: 'articleId' });
+        Article.hasMany(models.Comment, { foreignKey: 'articleId' });
     };
     return Article;
 };

@@ -11,7 +11,7 @@ router.get(
 );
 
 router.get(
-    '/',
+    '/new',
     csrfProtection,
     asyncHandler(async (req, res) => {
         res.render('articles', { token: req.csrfToken(), article: {} });
