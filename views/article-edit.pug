@@ -1,0 +1,23 @@
+//- GET /articles/:id/edit
+//- render edit-article.pug
+//- template variables needed: article
+//- form method and action POST /articles/:id/edit
+
+//- POST /articles/:id/edit
+//- update specific post
+//- redirect to /articles/articleId
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Submit Your Article
+    body
+        form(method='post' action=`/articles/${article.id}/edit`)
+            input(type='hidden' name='_csrf' value=token)
+            input(name='title' type='text' value= article.title)
+            div
+            textarea(name='body') #{article.body}
+            div
+                button(type='submit' value='submit') Submit
