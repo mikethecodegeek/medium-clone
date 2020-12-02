@@ -166,7 +166,14 @@
 
   .user-icon {
       font-size: 1.5rem;
-      margin-left: auto;
+      
+      /* position: relative;
+      left: 100px; */
+      /* top: 30px */
+  }
+
+  .user-menu {
+      margin-left: 250px;
   }
 
   .dropdown {
@@ -182,18 +189,19 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 12px 16px;
     z-index: 1;
+    left: -100px
   }
   
   .dropdown:hover .dropdown-content {
     display: block;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 770px) {
     .lg-only {
         display: none;
     }
     .logo {
-        margin-left: 20px;
+        margin-left: 40px;
     }
     .navlinks>ul {
         width: 100px
@@ -207,5 +215,17 @@
         line-height: 45px;
         width: 350px;
     }
+    /* .dropdown-content {
+        left: -100px;
+    } */
+    .user-icon {
+        margin-left: 0;
+    }
+
+    .user-menu {
+        margin-left:0px;
+    }
+
+    
   }
   

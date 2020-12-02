@@ -27,10 +27,11 @@ html
           ul
             //- li(class="lg-only") Our Story
             //- li(class="lg-only") Membership
-            li(class="dropdown") 
-              <i class="fas fa-user user-icon"></i>
-              div(class="dropdown-content") 
-                a(href="/users/logout" id="logout" ) Logout 
+            div(class="user-menu")
+              li(class="dropdown") 
+                <i class="fas fa-user user-icon"></i>
+                div(class="dropdown-content") 
+                  a(href="/users/logout" id="logout" ) Logout 
                   
             
     block content
