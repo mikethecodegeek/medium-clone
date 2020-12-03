@@ -56,3 +56,7 @@
 .comment-button {
     font-size: 2rem;
 }
+
+.like {
+    cursor: pointer;
+}

@@ -44,7 +44,7 @@ app.use(function (req, res, next) {
     next();
 });
 app.use('/', indexRouter);
-app.use('/api',apiRouter )
+app.use('/api', apiRouter);
 app.use('/users', usersRouter);
 app.use('/articles', articleRouter);
 
