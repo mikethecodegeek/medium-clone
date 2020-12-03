@@ -8,6 +8,20 @@
     font-family: serif;
 }
 
+.edit-article-title, .edit-article-body {
+    line-height: 1;
+    border:none;
+    padding: 5px;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: serif;
+}
+
+.edit-article-body {
+    height: 300px;
+}
+
 .new-article-body {
     height: 300px;
 }

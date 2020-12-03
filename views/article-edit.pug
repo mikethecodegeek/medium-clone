@@ -4,8 +4,8 @@ block content
         form(method='post' action=`/articles/${article.id}/edit`)
             input(type='hidden' name='_csrf' value=token)
             input(type='hidden' name='userId' value=session.auth.userId)
-            input(name='title' type='text' class="new-article-title" value= article.title)
+            input(name='title' type='text' class="edit-article-title" value= article.title)
             div
-            textarea(name='body' class="new-article-body") #{article.body}
+            textarea(name='body' class="edit-article-body") #{article.body}
             div
                 button(type='submit' class="black-outline" value='submit') Submit
