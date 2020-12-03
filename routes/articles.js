@@ -28,7 +28,9 @@ router.get(
     asyncHandler(async (req, res) => {
         const article = await Article.findByPk(req.params.id, {
             include: Comment,
+            order: [[Comment, 'createdAt', 'DESC']],
         });
+
         const comments = article.Comments.map((comm) => {
             return {
                 userId: comm.userId,
@@ -38,7 +40,6 @@ router.get(
         });
 
         const { articleId } = article;
-
         const totalLikes = await Like.findAll({ where: articleId });
         likeCount = totalLikes.length;
 

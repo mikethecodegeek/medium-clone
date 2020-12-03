@@ -25,9 +25,7 @@ router.post(
 
         const totalLikes = await Like.findAll({ where: articleId });
 
-        likeCount = totalLikes.length
-
-
+        likeCount = totalLikes.length;
 
         // console.log(like);
 

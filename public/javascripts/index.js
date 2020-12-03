@@ -9,35 +9,52 @@ window.addEventListener('DOMContentLoaded', (e) => {
     let article = document.querySelector('.singleArticle');
     let articleTitle = document.querySelector('.article-title');
     let newCommentBox = document.querySelector('.newcomment');
-
+    let allComments = document.querySelector('.comments');
     // let articleDiv = document.querySelector('.singleArticle');
 
-    commentButton.addEventListener('click', (e) => {
-        // let newComment = await
-        let comment = document.createElement('textarea');
+    let commentActive = false;
+    function createComment() {
+        let comment = document.createElement('input');
+        comment.setAttribute('type', 'text');
         comment.classList.add('new-comment-box');
         newCommentBox.appendChild(comment);
         let submitButton = document.createElement('button');
         submitButton.classList.add('submitComment');
         submitButton.textContent = 'Submit';
         newCommentBox.appendChild(submitButton);
+    }
+    createComment();
+
+    commentButton.addEventListener('click', (e) => {
+        newCommentBox.classList.toggle('hidden');
     });
 
     newCommentBox.addEventListener('click', async (e) => {
         // console.log(e.target.textContent)
         let articleId = article.getAttribute('id');
         let userId = articleTitle.getAttribute('id');
-        let body = document.querySelector('.new-comment-box').value;
+        let bodyText = document.querySelector('.new-comment-box');
+        let body = bodyText.value;
         let comment = { articleId, userId, body };
         if (e.target.textContent == 'Submit') {
-            // console.log(body)
             let newComment = await fetch('/api/new-comment', {
                 method: 'post',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ comment }),
-            }).then((response) => response.json());
+            })
+                .then((response) => response.json())
+                .then((res) => {
+                    let p = document.createElement('p');
+                    let div = document.createElement('div');
+                    div.setAttribute('class', 'commentsdiv');
+                    p.innerText = body;
+                    div.appendChild(p);
+                    allComments.prepend(div);
+                    bodyText.value = '';
+                    newCommentBox.classList.toggle('hidden');
+                });
         }
     });
 
@@ -55,7 +72,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify( like ),
+            body: JSON.stringify(like),
         }).then((res) => console.log(res.json()));
     });
 
