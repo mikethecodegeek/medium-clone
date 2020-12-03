@@ -1,19 +1,20 @@
 extends layout
 block content
   div(class="new-articles-container singleArticle" id=article.id)
-    h1(class='article-title' id=session.auth.userId)= article.title
-    p= article.body
-    if (session.auth.userId)
-      p(class="like") <i class="far fa-hand-point-up"></i>
-      p <i class="far fa-comment-dots comment-button"></i>
-      div(class='newcomment hidden')  
-    div(class='comments')
-      each comment in comments
-        div(class='commentsdiv')
-          p(class='commentbody')=comment.body 
-          p(class='commentauthor') --#{session.auth.userName} 
-          span(class='commentdate')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
+    div(class="article-display")
+      h1(class='article-title' id=session.auth.userId)= article.title
+      p(class="article-body")= article.body
+      if (session.auth.userId)
+        p(class="like") <i class="far fa-hand-point-up"></i>
+        p <i class="far fa-comment-dots comment-button"></i>
+        div(class='newcomment hidden')  
+      div(class='comments')
+        each comment in comments
+          div(class='commentsdiv')
+            p(class='commentbody')=comment.body 
+            p(class='commentauthor') --#{session.auth.userName} 
+            span(class='commentdate')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
 
 
-    if (session.auth.userId == article.userId)
-      a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
+      if (session.auth.userId == article.userId)
+        a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
