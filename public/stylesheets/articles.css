@@ -66,12 +66,19 @@
     /* marg */
 }
 
+.like-comment {
+    display: flex;
+}
+
 .comment-button {
     font-size: 2rem;
+    cursor: pointer;
+    margin-left: 30px;
 }
 
 .like {
     cursor: pointer;
+    font-size: 2rem;
 }
 
 .hidden {

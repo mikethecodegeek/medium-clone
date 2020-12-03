@@ -2,6 +2,7 @@ const express = require('express');
 const { Article, Comment, Like } = require('../db/models');
 const { asyncHandler, csrfProtection, blockRoute } = require('./utils');
 const router = express.Router();
+const { Op } = require('sequelize');
 
 router.get(
     '/new',
@@ -39,8 +40,11 @@ router.get(
             };
         });
 
-        const { articleId } = article;
-        const totalLikes = await Like.findAll({ where: articleId });
+        const { id } = article.dataValues;
+
+        const totalLikes = await Like.findAll({
+            where: { articleId: { [Op.eq]: id } },
+        });
         likeCount = totalLikes.length;
 
         res.render('article-single', { article, comments, likeCount });

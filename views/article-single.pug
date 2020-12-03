@@ -4,9 +4,10 @@ block content
     h1(class='article-title' id=session.auth.userId)= article.title
     p= article.body
     if (session.auth.userId)
-      p <i class="far fa-hand-point-up like"></i> #{likeCount}
-      p <i class="far fa-comment-dots comment-button"></i>
-      div(class='newcomment hidden')  
+      div(class='like-comment')
+        p <i class="far fa-thumbs-up like"></i> #{likeCount}
+        p <i class="far fa-comment-dots comment-button"></i>
+        div(class='newcomment hidden')  
     div(class='comments')
       each comment in comments
         div(class='commentsdiv')

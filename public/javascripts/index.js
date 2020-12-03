@@ -61,7 +61,9 @@ window.addEventListener('DOMContentLoaded', (e) => {
     const likeButton = document.querySelector('.like');
     likeButton.addEventListener('click', async (e) => {
         let articleId = article.getAttribute('id');
+        articleId = parseInt(articleId, 10);
         let userId = articleTitle.getAttribute('id');
+        userId = parseInt(userId, 10);
 
         let like = { articleId, userId };
 

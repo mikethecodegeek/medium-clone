@@ -17,17 +17,13 @@ router.post(
     asyncHandler(async (req, res) => {
         const { userId, articleId } = req.body;
 
-        let like = await Like.findOne({ userId, articleId });
+        // let like = await Like.findOne({ userId, articleId });
 
-        if (!like) {
-            like = await Like.create({ userId, articleId });
-        }
+        // if (!like) {
+        //     like = await Like.create({ userId, articleId });
+        // }
 
-        // const totalLikes = await Like.findAll({ where: articleId });
-
-        // likeCount = totalLikes.length;
-
-        // console.log(like);
+        const like = await Like.create({ userId, articleId });
 
         res.json({ like });
     })
