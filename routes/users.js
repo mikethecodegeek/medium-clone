@@ -73,18 +73,6 @@ router.get('/new', csrfProtection, (req, res) => {
     res.render('signup', { csrfToken: req.csrfToken(), user: {} });
 });
 
-router.get(
-    '/:id/articles',
-    csrfProtection,
-    asyncHandler(async (req, res) => {
-        const user = await User.findByPk(req.params.id, { include: Article });
-        const articles = user.Articles.map((article) => {
-            return { title: article.title, body: article.body };
-        });
-        console.log(articles);
-        res.render('display', { articles });
-    })
-);
 
 router.post(
     '/new',
@@ -221,6 +209,24 @@ router.post(
     })
 );
 
+router.get('/logout', (req, res) => {
+    logoutUser(req, res);
+    res.redirect('/');
+});
+router.get(
+    '/:id/articles',
+    csrfProtection,
+    asyncHandler(async (req, res) => {
+        const user = await User.findByPk(req.params.id, { include: Article });
+        const articles = user.Articles.map((article) => {
+            return { title: article.title, body: article.body };
+        });
+        console.log(articles);
+        res.render('display', { articles });
+    })
+);
+
+
 router.get(
     '/:id',
     asyncHandler(async (req, res) => {
@@ -233,9 +239,6 @@ router.get(
     })
 );
 
-router.get('/logout', (req, res) => {
-    logoutUser(req, res);
-    res.redirect('/');
-});
+
 
 module.exports = router;
