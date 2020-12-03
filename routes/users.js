@@ -9,7 +9,7 @@ const { loginUser, logoutUser } = require('../auth');
 
 router.get('/', async function (req, res, next) {
     const users = await User.findAll();
-    console.log(req.session.auth)
+    console.log(req.session.auth);
     res.json({ users });
 });
 
@@ -46,15 +46,14 @@ const userValidators = [
             'Password must contain at least 1 lowercase letter, uppercase letter, number, and special character (i.e. "!@#$%^&*")'
         )
         .custom((value) => {
-          return User.findOne({ where: { userName: value } }).then((user) => {
-              if (user) {
-                  
-                  return Promise.reject(
-                      'The provided Email Address is already in use by another account'
-                  );
-              }
-          });
-      }),
+            return User.findOne({ where: { userName: value } }).then((user) => {
+                if (user) {
+                    return Promise.reject(
+                        'The provided Email Address is already in use by another account'
+                    );
+                }
+            });
+        }),
     check('confirmPassword')
         .exists({ checkFalsy: true })
         .withMessage('Please provide a value for Confirm Password')
@@ -74,12 +73,18 @@ router.get('/new', csrfProtection, (req, res) => {
     res.render('signup', { csrfToken: req.csrfToken(), user: {} });
 });
 
-router.get('/:id/articles', csrfProtection, asyncHandler( async (req, res) => {
-    const user = await User.findByPk(req.params.id, { include: Article })
-    const articles = user.Articles.map(article => {return {title: article.title, body: article.body}})
-    console.log(articles)
-    res.render('display', {articles} );
-}));
+router.get(
+    '/:id/articles',
+    csrfProtection,
+    asyncHandler(async (req, res) => {
+        const user = await User.findByPk(req.params.id, { include: Article });
+        const articles = user.Articles.map((article) => {
+            return { title: article.title, body: article.body };
+        });
+        console.log(articles);
+        res.render('display', { articles });
+    })
+);
 
 router.post(
     '/new',
@@ -109,7 +114,7 @@ router.post(
             loginUser(req, res, user);
             // req.session.user = user;
             // res.json({ user });
-            res.redirect('/')
+            res.redirect('/');
         } else {
             const errors = validatorErrors.array().map((error) => {
                 console.log(error.msg);
@@ -137,37 +142,36 @@ const loginValidators = [
         })
         .withMessage('Please provide a value for username')
         .custom((value) => {
-          return User.findOne({ where: { userName: value } }).then((user) => {
-              if (!user) {
-                  return Promise.reject(
-                      'User or password not correct'
-                  );
-              }
-          });
-      }),
+            return User.findOne({ where: { userName: value } }).then((user) => {
+                if (!user) {
+                    return Promise.reject('User or password not correct');
+                }
+            });
+        }),
     check('password')
         .exists({
             checkFalsy: true,
         })
         .withMessage('Please provide a value for password')
         .custom((value) => {
-          return User.findOne({ where: { email: value } }).then(async (user) => {
-              if (user) {
-
-                  hash = user.hashedPassword;
-                  await bcrypt.compare(myPlaintextPassword, hash).then(function(result) {
-                    // result == true
-                    if (!result) {
-                      return Promise.reject(
-                        'User or password not correct'
-                      );
-
+            return User.findOne({ where: { email: value } }).then(
+                async (user) => {
+                    if (user) {
+                        hash = user.hashedPassword;
+                        await bcrypt
+                            .compare(myPlaintextPassword, hash)
+                            .then(function (result) {
+                                // result == true
+                                if (!result) {
+                                    return Promise.reject(
+                                        'User or password not correct'
+                                    );
+                                }
+                            });
                     }
-                  });
-                
-              }
-          });
-      }),
+                }
+            );
+        }),
 ];
 
 router.post(
@@ -185,8 +189,8 @@ router.post(
                 let hash = user.hashedPassword;
                 await bcrypt.compare(password, hash, function (err, result) {
                     if (!result) {
-                        let err =  'User or password not correct';
-                        let errors = [err]
+                        let err = 'User or password not correct';
+                        let errors = [err];
                         // res.redirect('/users/sign_in', {err})
                         // return res.send(err);
                         res.render('login', {
@@ -201,8 +205,8 @@ router.post(
                         return res.redirect('/');
                     }
                 });
-            }}
-         else {
+            }
+        } else {
             errors = validatorErrors.array().map((err) => {
                 console.log(err.msg);
                 return err.msg;
@@ -214,8 +218,20 @@ router.post(
                 csrfToken: req.csrfToken(),
             });
         }
-      }
-));
+    })
+);
+
+router.get(
+    '/:id',
+    asyncHandler(async (req, res) => {
+        const user = await User.findByPk(req.params.id, { include: Article });
+
+        const articles = user.Articles.map((article) => {
+            return { title: article.title, body: article.body };
+        });
+        res.render('user-page', { articles, user });
+    })
+);
 
 router.get('/logout', (req, res) => {
     logoutUser(req, res);
