@@ -1,5 +1,7 @@
 extends layout
 block content
-  div
+  div(class="new-articles-container")
     h1= article.title
     p.body= article.body
+    if session.auth
+      a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Article
