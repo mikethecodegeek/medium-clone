@@ -5,6 +5,7 @@ html
         title="Medium Clone"
         link(rel='stylesheet' href='/stylesheets/reset.css')
         link(rel="stylesheet", href="/stylesheets/navbar.css")
+        link(rel="stylesheet", href="/stylesheets/articles.css")
         <script src="https://kit.fontawesome.com/1f57d4952c.js" crossorigin="anonymous"></script>
 
   body
@@ -32,6 +33,7 @@ html
                 <i class="fas fa-user user-icon"></i>
                 div(class="dropdown-content") 
                   a(href="/users/logout" id="logout" ) Logout 
+                  a(href="/articles/new" id="newPoem" ) Write a poem
                   
             
     block content

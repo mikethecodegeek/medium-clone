@@ -1,14 +1,11 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Submit Your Article
-    body
-        form(method='post' action='/articles')
+extends layout
+block content
+    div(class="new-articles-container")
+        form(method='post' action='/articles/new')
             input(type='hidden' name='_csrf' value=token)
-            input(name='title' type='text' placeholder='Enter Title')
+            input(type='hidden' name='userId' value=session.auth.userId)
+            input(name='title' type='text' class="new-article-title" placeholder='Title')
             div
-            textarea(name='body' placeholder='Enter Poem')
+            textarea(name='body' class="new-article-body" placeholder='Write your poem')
             div
-                button(type='submit' value='submit') Submit
+                button(type='submit' class="black-outline" value='submit') Submit

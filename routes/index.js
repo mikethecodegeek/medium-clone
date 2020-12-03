@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 const { asyncHandler } = require('./utils');
-
 const { User, Article } = require('../db/models');
 
 router.get(
@@ -12,6 +11,8 @@ router.get(
             limit: 6,
             include: User,
         });
+
+        console.log(articles)
 
         res.render('index', { title: 'a/A Express Skeleton Home', articles });
     })
