@@ -197,9 +197,13 @@
   }
   
   .dropdown:hover .dropdown-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
-
+  .dropdown:hover .dropdown-content >a {
+    margin-top: 10px;
+    text-decoration: none;
+  }
   @media (max-width: 770px) {
     .lg-only {
         display: none;
