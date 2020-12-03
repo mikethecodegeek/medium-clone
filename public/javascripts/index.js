@@ -6,17 +6,35 @@ window.addEventListener("DOMContentLoaded", (e) => {
     let newCommentBox = document.querySelector('.newcomment')
     // let articleDiv = document.querySelector('.singleArticle');
 
-
-
-    commentButton.addEventListener('click', (e)=> {
-        // let newComment = await 
-        let comment = document.createElement('textarea');
+    let commentActive = false;
+    function createComment (){
+            let comment = document.createElement('textarea');
         comment.classList.add('new-comment-box')
         newCommentBox.appendChild(comment);
         let submitButton = document.createElement('button');
         submitButton.classList.add('submitComment');
         submitButton.textContent='Submit'
         newCommentBox.appendChild(submitButton);  
+    }
+    createComment();
+
+    commentButton.addEventListener('click', (e)=> {
+        // // let newComment = await 
+        // let comment = document.createElement('textarea');
+        // comment.classList.add('new-comment-box')
+        // newCommentBox.appendChild(comment);
+        // let submitButton = document.createElement('button');
+        // submitButton.classList.add('submitComment');
+        // submitButton.textContent='Submit'
+        // newCommentBox.appendChild(submitButton);  
+        // if (!commentActive){
+        //     newCommentBox.classlist.remove('hidden')
+        // }else{
+        //     newCommentBox.classList.add('hidden')
+        // }
+       newCommentBox.classlist.toggle('hidden')
+    //    console.log(newCommentBox)
+
     })
 
     newCommentBox.addEventListener('click', async (e)=> {
