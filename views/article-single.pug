@@ -6,12 +6,9 @@ block content
       each comment in comments
         p=comment.body
     if (session.auth.userId)
+      p(class="like") <i class="far fa-hand-point-up"></i>
       p <i class="far fa-comment-dots comment-button"></i>
     div(class='newcomment')  
     div(class='comments')
-  div(class="new-articles-container")
-    h1= article.title
-    p #{article.body}
-    p(class="like") <i class="far fa-hand-point-up"></i>
     if (session.auth.userId == article.userId)
       a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
