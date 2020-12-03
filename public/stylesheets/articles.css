@@ -1,0 +1,35 @@
+.new-article-title, .new-article-body {
+    line-height: 1.25;
+    border:none;
+    padding: 5px;
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: serif;
+}
+
+.new-article-body {
+    height: 300px;
+}
+
+.new-article-title:focus, .new-article-body:focus {
+    outline:none;
+}
+
+.new-articles-container {
+    margin-top: 40px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.black-outline {
+    color: black;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    width: 105px;
+    text-align: center;
+    margin:auto;
+    
+}
