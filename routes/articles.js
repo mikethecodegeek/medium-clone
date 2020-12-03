@@ -1,5 +1,5 @@
 const express = require('express');
-const { Article } = require('../db/models');
+const { Article, Comment } = require('../db/models');
 const { asyncHandler, csrfProtection, blockRoute } = require('./utils');
 const router = express.Router();
 
@@ -22,8 +22,9 @@ router.post("/new",blockRoute, csrfProtection, asyncHandler(async(req, res) => {
 router.get(
     '/:id',
     asyncHandler(async (req, res) => {
-        const article = await Article.findByPk(req.params.id);
-        res.render('article-single', { article });
+        const article = await Article.findByPk(req.params.id,{include: Comment});
+        const comments = article.Comments.map(comm => {return {userId: comm.userId,articleId:comm.articleId,body:comm.body}})
+        res.render('article-single', { article, comments });
     })
     );
 router.post(

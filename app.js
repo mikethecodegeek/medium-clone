@@ -9,6 +9,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const bcrypt = require('bcrypt');
 
 const indexRouter = require('./routes/index');
+const apiRouter = require('./routes/api');
 const usersRouter = require('./routes/users');
 const articleRouter = require('./routes/articles');
 
@@ -43,6 +44,7 @@ app.use(function (req, res, next) {
     next();
 });
 app.use('/', indexRouter);
+app.use('/api',apiRouter )
 app.use('/users', usersRouter);
 app.use('/articles', articleRouter);
 

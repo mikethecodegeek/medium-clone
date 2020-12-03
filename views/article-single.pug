@@ -1,7 +1,13 @@
 extends layout
 block content
-  div(class="new-articles-container")
-    h1= article.title
+  div(class="new-articles-container singleArticle" id=article.id)
+    h1(class='article-title' id=session.auth.userId)= article.title
     p= article.body
+      each comment in comments
+        p=comment.body
+    if (session.auth.userId)
+      p <i class="far fa-comment-dots comment-button"></i>
+    div(class='newcomment')  
+    div(class='comments')
     if (session.auth.userId == article.userId)
       a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem

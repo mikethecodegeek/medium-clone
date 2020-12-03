@@ -1,36 +1,43 @@
 window.addEventListener("DOMContentLoaded", (e) => {
+  
+    let commentButton = document.querySelector('.comment-button');
+    let article = document.querySelector('.singleArticle');
+    let articleTitle = document.querySelector('.article-title');
+    let newCommentBox = document.querySelector('.newcomment')
+    // let articleDiv = document.querySelector('.singleArticle');
 
-    document.getElementById("like").addEventListener("click", (e) => {
-        //another function here - should be in another file?
-    });
 
-    //submit button for comments?
-    document.getElementById("submit").addEventListener("click", (e) => {
-        e.preventDefault();
-        let userComment = document.getElementById("user-comment").value;
-        comment(userComment); //comment function outside of evLis
-    });
-});
 
-//assuming class is comments
-function comment(string) { //must have string as param
-    document.querySelector(".comments").innerHTML = ""; //check class name
-
-    fetch("comments", { //class name here
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            comment: string,
-        }),
+    commentButton.addEventListener('click', (e)=> {
+        // let newComment = await 
+        let comment = document.createElement('textarea');
+        comment.classList.add('new-comment-box')
+        newCommentBox.appendChild(comment);
+        let submitButton = document.createElement('button');
+        submitButton.classList.add('submitComment');
+        submitButton.textContent='Submit'
+        newCommentBox.appendChild(submitButton);  
     })
-        .then((res) => res.json())
-        .then((json) => {
-            json.comments.forEach((comment) => {
-                document.querySelector(
-                    ".comments" //make sure class name is same
-                )
-            });
-        });
-}
+
+    newCommentBox.addEventListener('click', async (e)=> {
+        // console.log(e.target.textContent)
+        let articleId = article.getAttribute('id');
+        let userId = articleTitle.getAttribute('id');
+        let body = document.querySelector('.new-comment-box').value;
+        let comment = {articleId,userId,body}
+        if (e.target.textContent == 'Submit') {
+            // console.log(body)
+            let newComment = await fetch('/api/new-comment',
+            {method: 'post',
+            headers: {
+                'Content-Type':'application/json',     
+            },
+            body: JSON.stringify({comment})
+        }).then((response)=>response.json())
+
+        }
+    })
+
+})
+
+
