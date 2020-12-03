@@ -9,6 +9,11 @@ block content
       div(class='newcomment hidden')  
     div(class='comments')
       each comment in comments
-        p=comment.body
+        div(class='commentsdiv')
+          p(class='commentbody')=comment.body 
+          p(class='commentauthor') --#{session.auth.userName} 
+          span(class='commentdate')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
+
+
     if (session.auth.userId == article.userId)
       a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem

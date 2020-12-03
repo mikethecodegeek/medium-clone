@@ -9,7 +9,8 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
     let commentActive = false;
     function createComment (){
-            let comment = document.createElement('textarea');
+        let comment = document.createElement('input');
+        comment.setAttribute('type', 'text')
         comment.classList.add('new-comment-box')
         newCommentBox.appendChild(comment);
         let submitButton = document.createElement('button');
@@ -23,6 +24,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
           newCommentBox.classList.toggle('hidden')
     })
 
+    
     newCommentBox.addEventListener('click', async (e)=> {
         // console.log(e.target.textContent)
         let articleId = article.getAttribute('id');
@@ -40,11 +42,13 @@ window.addEventListener("DOMContentLoaded", (e) => {
         }).then((response)=>response.json())
         .then(res => {
             let p =document.createElement('p')
+            let div = document.createElement('div')
+            div.setAttribute('class','commentsdiv')
             p.innerText = body;
-            allComments.appendChild(p)
+            div.appendChild(p)
+            allComments.prepend(div)
             bodyText.value ='';
             newCommentBox.classList.toggle('hidden')
-
         })
 
         }
