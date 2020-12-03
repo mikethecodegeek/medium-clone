@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+}
+
+.user-follow-button {
+    width: 60px;
+    height: 20px;
+}
+
+.articles {
+    margin: 50px;
+}
