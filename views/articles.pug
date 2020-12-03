@@ -7,6 +7,7 @@ html(lang="en")
     body
         form(method='post' action='/articles/new')
             input(type='hidden' name='_csrf' value=token)
+            input(type='hidden' name='userId' value=session.auth.userId)
             input(name='title' type='text' placeholder='Enter Title')
             div
             textarea(name='body' placeholder='Enter Poem')

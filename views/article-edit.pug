@@ -16,6 +16,7 @@ html(lang="en")
     body
         form(method='post' action=`/articles/${article.id}/edit`)
             input(type='hidden' name='_csrf' value=token)
+            input(type='hidden' name='userId' value=session.auth.userId)
             input(name='title' type='text' value= article.title)
             div
             textarea(name='body') #{article.body}
