@@ -1,6 +1,6 @@
-window.addEventListener("DOMContentLoaded", (e) => {
+window.addEventListener("DOMContentLoaded", () => {
 
-    document.getElementById("like").addEventListener("click", (e) => {
-        //another function here - should be in another file?
-    });
+    document.querySelector(".like").addEventListener("click", async (e) => {
+
+    })
 });
