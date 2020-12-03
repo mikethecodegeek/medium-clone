@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.post('/new-comment', asyncHandler(async(req, res) => {
     const {userId,articleId,body}=req.body.comment;
+    console.log(userId,articleId,body)
     const comment = await Comment.create({userId,articleId,body});
     res.json({comment});
 }));

@@ -53,6 +53,17 @@
     margin-top: 20px;
 }
 
+.newcomment {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    justify-content: space-evenly;
+}
+
+.newcomment>button {
+    /* marg */
+}
+
 .comment-button {
     font-size: 2rem;
 }
