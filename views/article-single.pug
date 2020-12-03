@@ -1,12 +1,7 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel='stylesheet' href='/stylesheets/reset.css')
-        title Submit Your Article
-    body
-      span
-        div
-            h1= article.title
-            p.body= article.body
+extends layout
+block content
+  div(class="new-articles-container")
+    h1= article.title
+    p= article.body
+    if (session.auth.userId == article.userId)
+      a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
