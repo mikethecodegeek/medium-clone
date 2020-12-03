@@ -2,6 +2,6 @@ extends layout
 block content
   div(class="new-articles-container")
     h1= article.title
-    p.body= article.body
-    if session.auth
-      a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Article
+    p= article.body
+    if (session.auth.userId == article.userId)
+      a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
