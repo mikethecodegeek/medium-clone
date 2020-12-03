@@ -10,7 +10,13 @@ module.exports = {
     host: process.env.DB_HOST,
     dialect: 'postgres',
     seederStorage: 'sequelize',
-  },
+  }
+  // },
+  // production: {
+  //   dialect: "postgres",
+  //   seederStorage: "sequelize",
+  //   use_env_variable: DATABASE_URL
+  // }
 };
 
 
