@@ -10,6 +10,7 @@ router.get(
         const articles = await Article.findAll({
             limit: 6,
             include: User,
+            orderBy: 'id'
         });
 
         console.log(articles)
