@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title User Profile
+        link(rel="stylesheet", href="/stylesheets/user-page.css")
+    body
+        div(class="header")
+            h1(class="user-name") #{user.firstName} #{user.lastName}
+            h4(class="user-follows") 9 Followers
+            h4(class="user-about") About
+            button(class="user-follow-button") Follow
+        div(class="articles")
+            each article in articles
+                h1=article.title
+                p=article.body
