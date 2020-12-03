@@ -73,7 +73,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(like),
-        }).then((res) => console.log(res.json()));
+        }).then((res) => res.json());
     });
 
     // const unlikeButton;

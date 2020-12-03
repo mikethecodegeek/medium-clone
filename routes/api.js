@@ -23,9 +23,9 @@ router.post(
             like = await Like.create({ userId, articleId });
         }
 
-        const totalLikes = await Like.findAll({ where: articleId });
+        // const totalLikes = await Like.findAll({ where: articleId });
 
-        likeCount = totalLikes.length;
+        // likeCount = totalLikes.length;
 
         // console.log(like);
 
