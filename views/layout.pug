@@ -7,6 +7,9 @@ html
         link(rel="stylesheet", href="/stylesheets/navbar.css")
         link(rel="stylesheet", href="/stylesheets/articles.css")
         <script src="https://kit.fontawesome.com/1f57d4952c.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script>
+
+        
 
   body
     if !session.auth
@@ -34,6 +37,6 @@ html
                 div(class="dropdown-content") 
                   a(href="/users/logout" id="logout" ) Logout 
                   a(href="/articles/new" id="newPoem" ) Write a poem
-                  
+    script(src="/javascripts/index.js")
             
     block content

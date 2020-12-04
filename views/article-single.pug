@@ -1,7 +1,25 @@
 extends layout
 block content
-  div(class="new-articles-container")
-    h1= article.title
-    p= article.body
+  div(class="new-articles-container singleArticle" id=article.id)
+    h1(class='article-title-single' id=session.auth.userId)= articletitles
+    p
+      a(class='article-author-single' href=`/users/${article.User.id}`) #{article.User.firstName} #{article.User.lastName}
+      span(class='article-author-single-date')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
+    p(class='article-body-single')= article.body
+    if (session.auth.userId)
+      div(class='like-comment')
+        p(class="like") <i class="far fa-thumbs-up like"></i> 
+        p(class="hidden unlike") <i class="fas fa-thumbs-up unlike"></i>
+        span(id="like-count") #{likeCount}
+        p <i class="far fa-comment-dots comment-button"></i>
+        div(class='newcomment hidden')  
+    div(class='comments')
+      each comment in comments
+        div(class='commentsdiv')
+          p(class='commentbody')=comment.body 
+          p(class='commentauthor') --#{session.auth.userName} 
+          span(class='commentdate')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
+
+
     if (session.auth.userId == article.userId)
       a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
