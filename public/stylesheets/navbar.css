@@ -54,6 +54,11 @@ div {
     font-weight: bold;
     margin-top: -5px;
     cursor: pointer;
+    color: white;
+}
+
+.logo-black {
+    color: black;
 }
 
 .modal {
