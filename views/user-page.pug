@@ -11,8 +11,8 @@ block content
         div(class="header")
             h1(class="user-name") #{user.firstName} #{user.lastName}
             h4(class="user-follows") 9 Followers
-            h4(class="user-about") About
             button(class="user-follow-button") Follow
+            h4(class="user-about") About
         div(class="articles")
             each article in articles
                 h1=article.title
