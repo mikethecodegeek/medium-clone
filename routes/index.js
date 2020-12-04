@@ -13,9 +13,7 @@ router.get(
             orderBy: 'id'
         });
 
-        console.log(articles)
-
-        res.render('index', { title: 'a/A Express Skeleton Home', articles });
+        res.render('index', { title: 'Poedium Home', articles });
     })
 );
 
