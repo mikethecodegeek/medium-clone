@@ -28,19 +28,18 @@ router.get(
     '/:id',
     asyncHandler(async (req, res) => {
         const article = await Article.findByPk(req.params.id, {
-            include: [Comment, User],
+            include: [User,{model: Comment, include: [User]}], 
             order: [[Comment, 'createdAt', 'DESC']],
         });
-        // const userName = await 
-        // let userName=article.User.userName
-        
-        console.log(article.Comments)
+
         const comments = article.Comments.map((comm) => {
             return {
                 userId: comm.userId,
+                userName: comm.User.userName,
                 articleId: comm.articleId,
                 body: comm.body,
             };
+    
         });
 
         const { id } = article.dataValues;
