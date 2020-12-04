@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-html(lang="en")
+extends layout.pug
+block content
+
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title User Profile
         link(rel="stylesheet", href="/stylesheets/user-page.css")
+        link(rel="stylesheet", href="/stylesheets/navbar.css")
     body
         div(class="header")
             h1(class="user-name") #{user.firstName} #{user.lastName}
