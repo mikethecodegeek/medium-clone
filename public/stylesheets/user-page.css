@@ -1,5 +1,17 @@
+.navbar {
+    background-color: black;
+}
+
 .logo {
-    color: black;
+    color: white;
+}
+
+.greeting {
+    color: white;
+}
+
+.user-icon {
+    color: white;
 }
 
 .header {
