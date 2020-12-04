@@ -81,15 +81,16 @@ window.addEventListener('DOMContentLoaded', (e) => {
             likeCount.innerText = likes;
             res.json();
         });
+        
         // hideLike()
     });
         
 
     // const unlike = document.querySelector('.unlike');
 
-    function hideLike(like) {
-        like.classList.remove("like");
-        like.classList.add("unlike");
-        likeCount--;
-    }
+    // function hideLike(like) {
+    //     like.classList.remove("like");
+    //     like.classList.add("unlike");
+    //     likeCount--;
+    // }
 });
