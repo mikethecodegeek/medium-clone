@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', (e) => {
     let homeButton = document.querySelector('.logo');
+    homeButton.classList.toggle('.logo-black');
 
     homeButton.addEventListener('click', () => {
         window.location = 'http://localhost:8080';
