@@ -81,22 +81,43 @@ window.addEventListener('DOMContentLoaded', (e) => {
             likeCount.innerText = likes;
 
             likeButton.innerHTML = '';
-            likeButton.classList.add('hidden')
+            likeButton.classList.add('hidden');
             likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i>';
 
-            document.querySelector('.unlike').classList.remove('hidden')
+            document.querySelector('.unlike').classList.remove('hidden');
 
             res.json();
         });
-
-        // hideLike()
     });
+    const unlikeButton = document.querySelector('.unlike')
+    unlikeButton.addEventListener('click', async () => {
+        let articleId = article.getAttribute('id');
+        articleId = parseInt(articleId, 10);
+        let userId = articleTitle.getAttribute('id');
+        userId = parseInt(userId, 10);
 
-    // const unlike = document.querySelector('.unlike');
+        let like = { articleId, userId };
 
-    // function hideLike(like) {
-    //     like.classList.remove("like");
-    //     like.classList.add("unlike");
-    //     likeCount--;
-    // }
+        await fetch('/api/unlike', {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(like),
+        }).then((res) => {
+            let likeCount = document.getElementById('like-count');
+            let likes = parseInt(likeCount.innerText, 10);
+            likes--;
+            console.log(likes);
+            likeCount.innerText = likes;
+
+            unlikeButton.innerHTML = '';
+            unlikeButton.classList.add('hidden');
+            unlikeButton.innerHTML = '<i class="far fa-thumbs-up"></i>';
+
+            document.querySelector('.like').classList.remove('hidden');
+
+            res.json();
+        });
+    });
 });

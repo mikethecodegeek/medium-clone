@@ -2,6 +2,7 @@ const express = require('express');
 const { Article, Comment, Like } = require('../db/models');
 const { asyncHandler, csrfProtection, blockRoute } = require('./utils');
 const router = express.Router();
+const { Op } = require('sequelize');
 
 router.post(
     '/new-comment',
@@ -17,13 +18,16 @@ router.post(
     asyncHandler(async (req, res) => {
         const { userId, articleId } = req.body;
 
-        // let like = await Like.findOne({ userId, articleId });
+        let like = await Like.findOne({
+            where: {
+                userId: { [Op.eq]: userId },
+                articleId: { [Op.eq]: articleId },
+            },
+        });
 
-        // if (!like) {
-        //     like = await Like.create({ userId, articleId });
-        // }
-
-        const like = await Like.create({ userId, articleId });
+        if (!like) {
+            like = await Like.create({ userId, articleId });
+        }
 
         res.json({ like });
     })
