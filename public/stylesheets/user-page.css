@@ -1,9 +1,10 @@
-.navbar {
-    background-color: black;
-}
-
 .logo {
     color: white;
+    margin-left: 50px;
+}
+
+.navbar {
+    background-color: black;
 }
 
 .greeting {
@@ -16,14 +17,27 @@
 
 .header {
     display: flex;
-    justify-content: space-around;
-    height: 100px;
+    justify-content: center;
     align-items: center;
+    height: 100px;
+    margin: 50px;
+}
+
+.user-name {
+    margin: 25px;
+}
+
+.user-follows {
+    margin: 25px;
 }
 
 .user-follow-button {
     width: 60px;
     height: 20px;
+}
+
+.user-about {
+    margin: 25px;
 }
 
 .articles {
