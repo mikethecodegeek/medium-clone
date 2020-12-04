@@ -81,6 +81,12 @@
     font-size: 2rem;
 }
 
+.unlike {
+    display: hidden;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
 .hidden {
     display: none;
 }
