@@ -10,6 +10,8 @@
 }
 .article-title-single{
     font-size: 2.6rem;
+    font-weight: bolder;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .article-body-single {
@@ -37,8 +39,9 @@
 }
 
 .singleArticle {
-  width: 60%;
+  width: 80%;
   margin: auto;
+  color: #292929;
 }
 
 .new-article-title:focus,
@@ -48,7 +51,7 @@
 
 .new-articles-container {
   margin-top: 40px;
-  width: 60%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -88,17 +91,27 @@
   font-size: 2rem;
   cursor: pointer;
   margin-left: 30px;
+  position: relative;
+  top: -20px;
 }
 
 .like {
   cursor: pointer;
   font-size: 2rem;
+  position: relative;
+  top: -20px;
 }
 
 .unlike {
   /* visibility: hidden; */
   cursor: pointer;
   font-size: 2rem;
+  position: relative;
+  top: -20px;
+}
+
+#like-count {
+  margin-left: 5px;
 }
 
 .hidden {

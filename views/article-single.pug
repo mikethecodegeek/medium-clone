@@ -1,7 +1,7 @@
 extends layout
 block content
   div(class="new-articles-container singleArticle" id=article.id)
-    h1(class='article-title-single' id=session.auth.userId)= articletitles
+    h1(class='article-title-single' id=session.auth.userId)= article.title
     p
       a(class='article-author-single' href=`/users/${article.User.id}`) #{article.User.firstName} #{article.User.lastName}
       span(class='article-author-single-date')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
