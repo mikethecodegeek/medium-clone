@@ -12,6 +12,7 @@
     align-items: center;
     border-bottom: solid black thin;
     padding-top: 5px;
+    background-color: black;
 }
 
 .yellow {
@@ -54,6 +55,7 @@ div {
     font-weight: bold;
     margin-top: -5px;
     cursor: pointer;
+    color: white;
 }
 
 .modal {
@@ -130,7 +132,7 @@ div {
 
 .hero {
     background-color: #ffc017;
-    height: 400px;
+    height: 450px;
     color: black;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -167,16 +169,16 @@ div {
 .greeting {
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
 }
 
 .user-icon {
     font-size: 1.5rem;
-
+    color: white;
     /* position: relative;
       left: 100px; */
     /* top: 30px */
 }
-
 .user-menu {
     margin-left: 250px;
 }
@@ -186,7 +188,6 @@ div {
     display: inline-block;
     cursor: pointer;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -197,7 +198,6 @@ div {
     z-index: 1;
     left: -100px;
 }
-
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
@@ -206,6 +206,7 @@ div {
     margin-top: 10px;
     text-decoration: none;
 }
+
 @media (max-width: 770px) {
     .lg-only {
         display: none;
