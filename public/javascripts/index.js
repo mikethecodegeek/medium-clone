@@ -67,16 +67,19 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
         let like = { articleId, userId };
 
-        console.log(like);
-
         await fetch('/api/like', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(like),
-        }).then((res) => res.json());
+        }).then((res) => {
+            let likeCount = document.getElementById('like-count');
+            let likes = parseInt(likeCount.innerText, 10);
+            likes++;
+            console.log(likes);
+            likeCount.innerText = likes;
+            res.json();
+        });
     });
-
-    // const unlikeButton;
 });
