@@ -20,7 +20,7 @@ block content
       each comment in comments
         div(class='commentsdiv')
           p(class='commentbody')=comment.body 
-          p(class='commentauthor')=comment.userId
+          p(class='commentauthor')=comment.userName
           span(class='commentdate')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
 
     if session.auth
