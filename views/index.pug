@@ -20,6 +20,6 @@ block content
           div(class="trending-article")
             p(class="number") 0#{article.id}
             div(class="trending-article-box")
-              a(href=`/users/${article.User.id}` class="trending-article-name") #{article.User.firstName} #{article.User.lastName}
-              a(href=`/articles/${article.id}` class="trending-article-title")=article.title
-              p(class="trending-article-date") Dec 1 * #{article.id} min read
+               a(href=`/users/${article.User.id}` class="trending-article-name") #{article.User.firstName} #{article.User.lastName}
+               a(href=`/articles/${article.id}` class="trending-article-title")=article.title
+               p(class="trending-article-date") Dec 1 * #{article.id} min read

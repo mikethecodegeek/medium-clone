@@ -1,4 +1,6 @@
-.navbar, .navlinks, .navlinks>ul {
+.navbar,
+.navlinks,
+.navlinks > ul {
     display: flex;
     /* justify-content: space-between; */
     font-family: sans-serif;
@@ -13,19 +15,18 @@
 }
 
 .yellow {
-    background-color: #FFC017;
-
+    background-color: #ffc017;
 }
-.navlinks>ul {
+.navlinks > ul {
     list-style: none;
     justify-content: space-evenly;
     width: 350px;
     margin-top: 5px;
-
 }
 
-.navlinks>ul>li,div {
-    font-size: .9rem;
+.navlinks > ul > li,
+div {
+    font-size: 0.9rem;
 }
 
 #getStarted {
@@ -38,12 +39,12 @@
     width: 105px;
     text-align: center;
     text-decoration: none;
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 #login {
     text-decoration: none;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-family: sans-serif;
 }
 
@@ -52,10 +53,10 @@
     margin-left: 40px;
     font-weight: bold;
     margin-top: -5px;
+    cursor: pointer;
 }
 
 .modal {
-    
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
@@ -64,48 +65,49 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
+}
 
-  .modalTitle {
-      font-size: 1.4rem;
-      text-align: center;
-  }
-  .modalInputFields {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  }
+.modalTitle {
+    font-size: 1.4rem;
+    text-align: center;
+}
+.modalInputFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-  .modalInput,.modalTextArea {
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      width: 100%;
-      max-width: 500px;
-      border-top:none;
-      border-left: none;
-      border-right: none;
-      border-bottom: black 1px solid;
-  }
+.modalInput,
+.modalTextArea {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: black 1px solid;
+}
 
-  .modalTextArea {
+.modalTextArea {
     height: 200px;
     border-bottom: none;
-  }
+}
 
-  .modalSubmit {
+.modalSubmit {
     /* margin-right: 75px; */
     background-color: black;
     color: white;
@@ -113,44 +115,43 @@
     border-radius: 5px;
     width: 105px;
     text-align: center;
-   
-  }
+}
 
-  .error {
-      text-align: center;
-      text-decoration: none;
-      list-style: none;
-      color:red;
-  }
+.error {
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    color: red;
+}
 
-  .modalClose {
-      text-decoration: none;
-  }
+.modalClose {
+    text-decoration: none;
+}
 
-  .hero {
-    background-color: #FFC017;
+.hero {
+    background-color: #ffc017;
     height: 400px;
     color: black;
     font-family: 'Times New Roman', Times, serif;
-  }
+}
 
-  .hero > h1 {
-      color: black;
-      font-size: 4.7rem;
-      width: 450px;
-      margin-left: 45px;
-      padding-top: 30px;
-      line-height: 70px;
-      font-weight: 500;
-  }
-  .hero>p {
-      margin-left: 45px;
-      margin-top: 60px;
-      font-size: 1.3rem;
-      width: 650px;
-  }
+.hero > h1 {
+    color: black;
+    font-size: 4.7rem;
+    width: 450px;
+    margin-left: 45px;
+    padding-top: 30px;
+    line-height: 70px;
+    font-weight: 500;
+}
+.hero > p {
+    margin-left: 45px;
+    margin-top: 60px;
+    font-size: 1.3rem;
+    width: 650px;
+}
 
-  .heroButton {
+.heroButton {
     margin-left: 45px;
     text-decoration: none;
     border: 1px solid black;
@@ -161,64 +162,65 @@
     width: 70px;
     border-radius: 5px;
     text-align: center;
-  }
+}
 
-  .greeting {
-      font-size: 1.5rem;
-      font-weight: bold;
-  }
+.greeting {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
-  .user-icon {
-      font-size: 1.5rem;
-      
-      /* position: relative;
+.user-icon {
+    font-size: 1.5rem;
+
+    /* position: relative;
       left: 100px; */
-      /* top: 30px */
-  }
+    /* top: 30px */
+}
 
-  .user-menu {
-      margin-left: 250px;
-  }
+.user-menu {
+    margin-left: 250px;
+}
 
-  .dropdown {
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+    cursor: pointer;
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
-    left: -100px
-  }
-  
-  .dropdown:hover .dropdown-content {
+    left: -100px;
+}
+
+.dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
-  }
-  .dropdown:hover .dropdown-content >a {
+}
+.dropdown:hover .dropdown-content > a {
     margin-top: 10px;
     text-decoration: none;
-  }
-  @media (max-width: 770px) {
+}
+@media (max-width: 770px) {
     .lg-only {
         display: none;
     }
     .logo {
         margin-left: 40px;
     }
-    .navlinks>ul {
-        width: 100px
+    .navlinks > ul {
+        width: 100px;
     }
-    .hero>p {
+    .hero > p {
         word-wrap: break-word;
-        width: 90%
+        width: 90%;
     }
-    .hero>h1 {
+    .hero > h1 {
         font-size: 3rem;
         line-height: 45px;
         width: 350px;
@@ -231,9 +233,6 @@
     }
 
     .user-menu {
-        margin-left:0px;
+        margin-left: 0px;
     }
-
-    
-  }
-  
+}
