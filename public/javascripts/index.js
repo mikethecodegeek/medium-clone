@@ -76,15 +76,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
             },
             body: JSON.stringify(like),
         }).then((res) => res.json());
-        
-        hideLike();
     });
 
-    // const unlike = document.querySelector('.unlike');
-
-    function hideLike(like) {
-        like.classList.remove("like");
-        like.classList.add("unlike");
-        likeCount--;
-    }
+    // const unlike
 });
