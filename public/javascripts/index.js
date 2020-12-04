@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
     let commentButton = document.querySelector('.comment-button');
     let article = document.querySelector('.singleArticle');
-    let articleTitle = document.querySelector('.article-title');
+    let articleTitle = document.querySelector('.article-title-single');
     let newCommentBox = document.querySelector('.newcomment');
     let allComments = document.querySelector('.comments');
     // let articleDiv = document.querySelector('.singleArticle');
