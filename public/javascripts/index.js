@@ -77,13 +77,11 @@ window.addEventListener('DOMContentLoaded', (e) => {
             let likeCount = document.getElementById('like-count');
             let likes = parseInt(likeCount.innerText, 10);
             likes++;
-            console.log(likes);
             likeCount.innerText = likes;
 
-            likeButton.innerHTML = '';
             likeButton.classList.add('hidden');
-            likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i>';
-
+            // likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i>';
+            
             document.querySelector('.unlike').classList.remove('hidden');
 
             res.json();
@@ -108,12 +106,10 @@ window.addEventListener('DOMContentLoaded', (e) => {
             let likeCount = document.getElementById('like-count');
             let likes = parseInt(likeCount.innerText, 10);
             likes--;
-            console.log(likes);
             likeCount.innerText = likes;
 
-            unlikeButton.innerHTML = '';
             unlikeButton.classList.add('hidden');
-            unlikeButton.innerHTML = '<i class="far fa-thumbs-up"></i>';
+            // unlikeButton.innerHTML = '<i class="far fa-thumbs-up"></i>';
 
             document.querySelector('.like').classList.remove('hidden');
 
