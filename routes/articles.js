@@ -28,7 +28,7 @@ router.get(
     '/:id',
     asyncHandler(async (req, res) => {
         const article = await Article.findByPk(req.params.id, {
-            include: [Comment, User], 
+            include: [Comment, User],
             order: [[Comment, 'createdAt', 'DESC']],
         });
         // const userName = await 
@@ -45,12 +45,32 @@ router.get(
 
         const { id } = article.dataValues;
 
+        let userId;
+
+        if (req.session.auth) {
+            userId = req.session.auth.userId;
+        }
+
+        let isLiked = await Like.findOne({
+            where: {
+                articleId: {
+                    [Op.eq]: id,
+                },
+                userId: {
+                    [Op.eq]: userId,
+                },
+            },
+        });
+
+        if (isLiked) isLiked = true;
+
         const totalLikes = await Like.findAll({
             where: { articleId: { [Op.eq]: id } },
         });
+
         likeCount = totalLikes.length;
 
-        res.render('article-single', { article, comments, likeCount });
+        res.render('article-single', { article, comments, likeCount, isLiked });
     })
 );
 

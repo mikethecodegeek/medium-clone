@@ -10,20 +10,26 @@ block content
       span(class='article-author-single-date')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
     p(class='article-body-single')= article.body
     if (session.auth)
-      div(class='like-comment')
-        p(class="like") <i class="far fa-thumbs-up like"></i> 
-        p(class="hidden unlike") <i class="fas fa-thumbs-up unlike"></i>
-        span(id="like-count") #{likeCount}
-        p <i class="far fa-comment-dots comment-button"></i>
-        div(class='newcomment hidden')  
+      if (isLiked)
+        div(class='like-comment')
+          p(class="like hidden") <i class="far fa-thumbs-up like"></i> 
+          p(class="unlike") <i class="fas fa-thumbs-up unlike"></i>
+          span(id="like-count") #{likeCount}
+          p <i class="far fa-comment-dots comment-button"></i>
+          div(class='newcomment hidden')
+      else
+        div(class='like-comment')
+          p(class="like") <i class="far fa-thumbs-up like"></i> 
+          p(class="hidden unlike") <i class="fas fa-thumbs-up unlike"></i>
+          span(id="like-count") #{likeCount}
+          p <i class="far fa-comment-dots comment-button"></i>
+          div(class='newcomment hidden')  
     div(class='comments')
       each comment in comments
         div(class='commentsdiv')
           p(class='commentbody')=comment.body 
           p(class='commentauthor')=comment.userId
           span(class='commentdate')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
-
-    if session.auth
-    
-      if (session.auth.userId == article.userId)
-        a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
+          
+    if (session.auth.userId == article.userId)
+      a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
