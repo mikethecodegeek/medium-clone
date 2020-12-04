@@ -132,7 +132,7 @@ div {
 
 .hero {
     background-color: #ffc017;
-    height: 400px;
+    height: 450px;
     color: black;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -179,7 +179,6 @@ div {
       left: 100px; */
     /* top: 30px */
 }
-
 .user-menu {
     margin-left: 250px;
 }
@@ -189,7 +188,6 @@ div {
     display: inline-block;
     cursor: pointer;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -200,7 +198,6 @@ div {
     z-index: 1;
     left: -100px;
 }
-
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
@@ -209,6 +206,7 @@ div {
     margin-top: 10px;
     text-decoration: none;
 }
+
 @media (max-width: 770px) {
     .lg-only {
         display: none;
