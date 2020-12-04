@@ -5,7 +5,8 @@ block content
     p= article.body
     if (session.auth.userId)
       div(class='like-comment')
-        p <i class="far fa-thumbs-up like"></i> 
+        p(class="like") <i class="far fa-thumbs-up like"></i> 
+        p(class="hidden unlike") <i class="fas fa-thumbs-up unlike"></i>
         span(id="like-count") #{likeCount}
         p <i class="far fa-comment-dots comment-button"></i>
         div(class='newcomment hidden')  

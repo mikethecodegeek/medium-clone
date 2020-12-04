@@ -79,12 +79,18 @@ window.addEventListener('DOMContentLoaded', (e) => {
             likes++;
             console.log(likes);
             likeCount.innerText = likes;
+
+            likeButton.innerHTML = '';
+            likeButton.classList.add('hidden')
+            likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i>';
+
+            document.querySelector('.unlike').classList.remove('hidden')
+
             res.json();
         });
-        
+
         // hideLike()
     });
-        
 
     // const unlike = document.querySelector('.unlike');
 

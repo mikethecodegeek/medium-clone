@@ -82,13 +82,14 @@
 }
 
 .unlike {
-    visibility: hidden;
+    /* visibility: hidden; */
     cursor: pointer;
     font-size: 2rem;
 }
 
 .hidden {
     display: none;
+    /* visibility: hidden; */
 }
 
 .commentsdiv {
