@@ -30,6 +30,6 @@ block content
           p(class='commentbody')=comment.body 
           p(class='commentauthor')=comment.userName
           span(class='commentdate')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
-          
-    if (session.auth.userId == article.userId)
-      a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
+    if session.auth
+      if (session.auth.userId == article.userId)
+        a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem
