@@ -1,5 +1,5 @@
 const express = require('express');
-const { Article, Comment, Like } = require('../db/models');
+const { Article, Comment, Like, User } = require('../db/models');
 const { asyncHandler, csrfProtection, blockRoute } = require('./utils');
 const router = express.Router();
 const { Op } = require('sequelize');
@@ -28,7 +28,7 @@ router.get(
     '/:id',
     asyncHandler(async (req, res) => {
         const article = await Article.findByPk(req.params.id, {
-            include: Comment,
+            include: [Comment, User], 
             order: [[Comment, 'createdAt', 'DESC']],
         });
 
