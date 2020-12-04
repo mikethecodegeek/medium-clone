@@ -12,6 +12,7 @@
     align-items: center;
     border-bottom: solid black thin;
     padding-top: 5px;
+    background-color: black;
 }
 
 .yellow {
@@ -54,6 +55,7 @@ div {
     font-weight: bold;
     margin-top: -5px;
     cursor: pointer;
+    color: white;
 }
 
 .modal {
@@ -167,11 +169,12 @@ div {
 .greeting {
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
 }
 
 .user-icon {
     font-size: 1.5rem;
-
+    color: white;
     /* position: relative;
       left: 100px; */
     /* top: 30px */
