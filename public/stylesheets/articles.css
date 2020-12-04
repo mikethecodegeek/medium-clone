@@ -82,7 +82,7 @@
 }
 
 .unlike {
-    display: hidden;
+    visibility: hidden;
     cursor: pointer;
     font-size: 2rem;
 }
