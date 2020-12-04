@@ -31,7 +31,10 @@ router.get(
             include: [Comment, User], 
             order: [[Comment, 'createdAt', 'DESC']],
         });
-
+        // const userName = await 
+        // let userName=article.User.userName
+        
+        console.log(article.Comments)
         const comments = article.Comments.map((comm) => {
             return {
                 userId: comm.userId,
