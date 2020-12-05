@@ -17,44 +17,36 @@
 
 .header {
     display: flex;
-    /* justify-content: space-around;
-    align-items: center; */
-    /* align-self: flex-end; */
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    align-self: flex-end;
     height: 100px;
-    /* margin: 50px; */
+    margin: 50px;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin-top: 40px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* .header > h1 {
+.header > h1 {
     font-size: 2.6rem;
     font-weight: bolder;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: black;
-    margin-right: 1000px;
-    
-} */
-
+}
 
 .user-name {
+    margin: 25px;
     text-decoration: none;
+    margin-left: -17px;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2.6rem;
-    font-weight: bolder;
-    color: black;
-    margin-right: 1000px;
-    
 }
 
 .user-follows {
-    /* margin: 25px; */
+    margin: 25px;
     font-size: 1.2rem;
 }
 
 .user-follow-button {
+    width: 60px;
     /* width: 60px;
     height: 20px;
     margin: 10px; */
@@ -62,21 +54,22 @@
     height: 40px;
     font-size: 1rem;
 }
-/* number of followers and follow button */
-.follow-info {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-     margin-left: auto;
-    margin-right: auto;
+
+.user-about {
+    margin: 25px;
 }
-/* 
-Includes Poem and Title */
+.follow-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .articles {
-    /* margin: 50px;
+    margin: 50px;
+    margin: 50px;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.4rem;
-    padding: 5px; */
+    padding: 5px;
     margin-top: 20px;
     padding-left: 30px;
     padding-top: 10px;
@@ -84,12 +77,12 @@ Includes Poem and Title */
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.2rem;
 }
-/* Title */
+
 h1 {
     margin: 0 150px;
     text-decoration: solid;
 }
-/* The Poem */
+
 p {
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.3;
