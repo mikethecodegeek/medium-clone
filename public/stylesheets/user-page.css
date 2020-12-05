@@ -17,29 +17,72 @@
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    align-self: flex-end;
     height: 100px;
     margin: 50px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header > h1 {
+    font-size: 2.6rem;
+    font-weight: bolder;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: black;
 }
 
 .user-name {
-    margin: 25px;
+    text-decoration: none;
+    margin-left: -17px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .user-follows {
     margin: 25px;
+    font-size: 1.2rem;
 }
 
 .user-follow-button {
-    width: 60px;
+    /* width: 60px;
     height: 20px;
+    margin: 10px; */
+    width: 80px;
+    height: 40px;
+    font-size: 1rem;
 }
 
-.user-about {
-    margin: 25px;
+.follow-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .articles {
-    margin: 50px;
+    /* margin: 50px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    padding: 5px; */
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+h1 {
+    margin: 0 150px;
+    text-decoration: solid;
+}
+
+p {
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.3;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 10px 150px;
+    color: #292929;
 }
