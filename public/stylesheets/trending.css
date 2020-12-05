@@ -37,6 +37,7 @@ a {
     flex-direction: column;
 }
 
+
 .trending-article-name {
     margin-bottom: 10px;
     font-size: .9rem;
@@ -55,6 +56,17 @@ a {
     font-size: .8rem;
 }
 
+.following-name {
+    color:rgb(39, 134, 37);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 25px;
+    }
+}
 @media (min-width: 730px) {
     .articles-div {
         grid-template-columns: 1fr 1fr;

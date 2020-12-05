@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const { asyncHandler } = require('./utils');
-const { User, Article } = require('../db/models');
+const { User, Article,FollowingUser } = require('../db/models');
 
 router.get(
     '/',
@@ -12,8 +12,9 @@ router.get(
             include: User,
             orderBy: 'id'
         });
-
-        res.render('index', { title: 'Poedium Home', articles });
+        const following = await FollowingUser.findAll({where:{followerId:req.session.auth.userId},include:User})
+        console.log(following)
+        res.render('index', { title: 'Poedium Home', articles,following });
     })
 );
 

@@ -4,8 +4,9 @@ const bcrypt = require('bcrypt');
 const { asyncHandler, csrfProtection } = require('./utils');
 const { check, validationResult } = require('express-validator');
 
-const { User, Article } = require('../db/models');
+const { User, Article, FollowingUser } = require('../db/models');
 const { loginUser, logoutUser } = require('../auth');
+const followinguser = require('../db/models/followinguser');
 
 router.get('/', async function (req, res, next) {
     const users = await User.findAll();
@@ -231,11 +232,20 @@ router.get(
     '/:id',
     asyncHandler(async (req, res) => {
         const user = await User.findByPk(req.params.id, { include: Article });
-
+        const followers = await FollowingUser.findAll({where:{userId:user.id}})
+       
+        let numFollows = followers.length;
         const articles = user.Articles.map((article) => {
-            return { title: article.title, body: article.body };
+            return { title: article.title, body: article.body, id: article.id };
         });
-        res.render('user-page', { articles, user });
+        
+        const following = await FollowingUser.findOne({where:{userId: req.params.id,followerId:req.session.auth.userId}})
+      
+        let isFollowing = false;
+        if (following) {
+            isFollowing=true;
+        }
+        res.render('user-page', { articles, user, isFollowing,numFollows });
     })
 );
 

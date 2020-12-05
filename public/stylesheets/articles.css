@@ -12,12 +12,107 @@
     font-size: 2.6rem;
     font-weight: bolder;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
 }
+
+.article-title-multi {
+  font-size: 2rem;
+    font-weight: bold;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+}
+
+.user-name {
+  font-size: 2.3rem;
+  font-weight: bolder;
+}
+
+.user-follows {
+  margin-left: 10px;
+  font-style: italic;
+  color: rgb(106, 106, 106);
+}
+
+.user-follow-button {
+  color:  rgb(39, 134, 37);
+  background-color: transparent;
+  padding: 10px;
+  /* font-size: 1.1rem; */
+  width: 100px;
+  /* font-size: 1.1rem; */
+  /* border: none; */
+  cursor: pointer;
+  /* border: 0; */
+  background: none;
+  box-shadow: none;
+}
+
+.flex-base {
+  display: flex;
+  align-items: baseline;
+}
+.user-unfollow-button {
+ 
+    background-color:  rgb(39, 134, 37);
+    color: white;
+    padding: 10px;
+    /* font-size: 1.1rem; */
+    width: 100px;
+    /* font-size: 1.1rem; */
+    /* border: none; */
+    cursor: pointer;
+    /* border: 0; */
+ 
+    box-shadow: none;
+  
+}
+
+.mb-40 {
+  margin-bottom: 30px;
+}
+.header {
+  display: flex;
+  margin-top: 10px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  justify-content: space-between;
+  border-bottom: 1px solid  rgb(106, 106, 106);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 50px; */
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  align-items: center;
+}
+
 
 .article-body-single {
   line-height: 1.5;
   font-size: 1.4rem;
 }
+
+.edit-article-button {
+  margin-bottom: 20px;
+  height: 30px;
+}
+
+.read-more {
+  margin-bottom: 20px;
+  border:thin solid rgb(39, 134, 37);;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: rgb(39, 134, 37);
+}
+
+.read-more:hover {
+  background-color: rgb(39, 134, 37);
+  color: white;
+}
+
+
 
 .edit-article-title,
 .edit-article-body {
@@ -42,6 +137,13 @@
   width: 80%;
   margin: auto;
   color: #292929;
+}
+
+.articles > .article {
+  width: 80%;
+  margin: auto;
+  border-bottom: 1px solid  rgb(106, 106, 106);
+  margin-bottom: 20px;
 }
 
 .new-article-title:focus,

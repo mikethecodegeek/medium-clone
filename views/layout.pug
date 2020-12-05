@@ -39,6 +39,7 @@ html
                 div(class="dropdown-content") 
                   a(href="/users/logout" id="logout" ) Logout 
                   a(href="/articles/new" id="newPoem" ) Write a poem
-    script(src="/javascripts/index.js")
+                  a(href=`/users/${session.auth.userId}` id="myPoems" ) My Poems 
+    //- script(src="/javascripts/index.js")
             
     block content

@@ -1,4 +1,7 @@
 'use strict';
+
+const followinguser = require("./followinguser");
+
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     firstName: DataTypes.STRING,
@@ -10,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   User.associate = function(models) {
     // associations can be defined here
     User.hasMany(models.Article, { foreignKey: 'userId' })
-    User.hasMany(models.FollowingUser, { foreignKey: 'userId' })
+    // User.belongsToMany(models.User, { as:'follow', through: 'followingUser.followerId' })
   };
   return User;
 };

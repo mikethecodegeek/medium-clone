@@ -1,8 +1,9 @@
 const express = require('express');
-const { Article, Comment, Like } = require('../db/models');
+const { Article, Comment, Like, User, FollowingUser } = require('../db/models');
 const { asyncHandler, csrfProtection, blockRoute } = require('./utils');
 const router = express.Router();
 const { Op } = require('sequelize');
+const followinguser = require('../db/models/followinguser');
 
 router.post(
     '/new-comment',
@@ -10,6 +11,25 @@ router.post(
         const { userId, articleId, body } = req.body.comment;
         const comment = await Comment.create({ userId, articleId, body });
         res.json({ comment });
+    })
+);
+
+router.post(
+    '/follow-user',
+    asyncHandler(async (req, res) => {
+        const { userId, followerId } = req.body;
+        const follow = await FollowingUser.create({ userId, followerId });
+        res.json({ follow });
+    })
+);
+
+router.post(
+    '/unfollow-user',
+    asyncHandler(async (req, res) => {
+        const { userId, followerId } = req.body;
+        const unfollow = await FollowingUser.findOne({where:{userId, followerId }});
+        await unfollow.destroy();
+        res.json({ unfollow });
     })
 );
 
@@ -37,7 +57,7 @@ router.delete(
     '/unlike',
     asyncHandler(async (req, res) => {
         const { userId, articleId } = req.body;
-        const likes = await Like.findAll({ where: { userId, articleId } });
+        const likes = await Like.findOne({ where: { userId, articleId } });
         likes.forEach(async (el) => await el.destroy());
         res.json({ message: 'Deleted' });
     })

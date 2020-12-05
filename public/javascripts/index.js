@@ -17,8 +17,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
     let year = new Date().getFullYear();
     let dateShown =  `${month}/${day}/${year}`;
-    console.log(userName.innerText);
-    console.log(dateShown)
+    // console.log(userName.innerText);
+    // console.log(dateShown)
     // let articleDiv = document.querySelector('.singleArticle');
 
     let commentActive = false;
@@ -125,4 +125,23 @@ window.addEventListener('DOMContentLoaded', (e) => {
             res.json();
         });
     });
+
+    // async function follow() {
+    //     const followButton = document.querySelector('.user-follow-button');
+    //     const followerId = document.querySelector('.userId').value;
+    //     const userId = followButton.id;
+    //     const follow ={userId,followerId};
+    //     await fetch('/api/follow', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(follow),
+    //     }).then((res) => {
+           
+    //         followButton.innerText = 'following'
+    //         res.json();
+    //     });
+
+    // }
 });
