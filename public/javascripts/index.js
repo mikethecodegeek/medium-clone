@@ -1,15 +1,24 @@
 window.addEventListener('DOMContentLoaded', (e) => {
-    let homeButton = document.querySelector('.logo');
+    // let homeButton = document.querySelector('.logo');
 
-    homeButton.addEventListener('click', () => {
-        window.location = 'http://localhost:8080';
-    });
+    // homeButton.addEventListener('click', () => {
+    //     window.location = 'http://localhost:8080';
+    // });
 
     let commentButton = document.querySelector('.comment-button');
     let article = document.querySelector('.singleArticle');
     let articleTitle = document.querySelector('.article-title-single');
     let newCommentBox = document.querySelector('.newcomment');
     let allComments = document.querySelector('.comments');
+
+    let userName = document.querySelector('.username');
+    let day = new Date().getDate();
+    let month = new Date().getMonth();
+
+    let year = new Date().getFullYear();
+    let dateShown =  `${month}/${day}/${year}`;
+    console.log(userName.innerText);
+    console.log(dateShown)
     // let articleDiv = document.querySelector('.singleArticle');
 
     let commentActive = false;
@@ -49,12 +58,12 @@ window.addEventListener('DOMContentLoaded', (e) => {
                     let p = document.createElement('p');
                     let div = document.createElement('div');
                     div.setAttribute('class', 'commentsdiv');
-                    p.innerText = body;
+                    p.innerHTML = `<p class="commentbody">${body}</p> <p class="commentauthor">${userName.innerText}</p><p class="commentdate">${dateShown}</p>`;
                     div.appendChild(p);
                     allComments.prepend(div);
                     bodyText.value = '';
                     newCommentBox.classList.toggle('hidden');
-                });
+                }); 
         }
     });
 

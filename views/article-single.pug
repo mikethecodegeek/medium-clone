@@ -1,8 +1,11 @@
 extends layout
 block content
+  
   div(class="new-articles-container singleArticle" id=article.id)
     if session.auth
       h1(class='article-title-single' id=session.auth.userId)= article.title
+      div(class="hidden username")=session.auth.userName
+      //- div(class="hidden date")=date.now()
     if !session.auth
       h1(class='article-title-single')= article.title
     p
@@ -29,7 +32,7 @@ block content
         div(class='commentsdiv')
           p(class='commentbody')=comment.body 
           p(class='commentauthor')=comment.userName
-          span(class='commentdate')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
+          span(class='commentdate')='' + moment(comment.createdAt).format("MM/DD/YYYY") + ''
     if session.auth
       if (session.auth.userId == article.userId)
         a(href=`/articles/${article.id}/edit` class="heroButton editArticle") Edit Poem

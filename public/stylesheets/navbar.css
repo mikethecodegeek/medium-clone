@@ -55,6 +55,7 @@ div {
     font-weight: bold;
     margin-top: -5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .modal {

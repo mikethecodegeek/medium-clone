@@ -14,7 +14,8 @@ html
   body
     if !session.auth
       div(class="navbar yellow")
-        div(class="logo") <i class="fas fa-crow"></i> Poedium
+        div
+          a(href="/" class="logo") <i class="fas fa-crow"></i> Poedium
         div(class="navlinks")
           ul
             li(class="lg-only") Our Story
@@ -25,7 +26,8 @@ html
           a(href="/users/new" id="getStarted" class= 'get_started_button') Get Started       
     if session.auth
       div(class="navbar")
-        div(class="logo") <i class="fas fa-crow"></i> Poedium
+        div 
+          a(href="/" class="logo") <i class="fas fa-crow"></i> Poedium
         div(class="greeting lg-only") Hello #{session.auth.userName}
         div(class="navlinks")
           ul
