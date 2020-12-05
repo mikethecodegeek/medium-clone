@@ -84,6 +84,7 @@
   /* flex-direction: column; */
   /* width: 350px; */
   justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
 
@@ -125,6 +126,7 @@
 
 .commentsdiv {
   margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -132,6 +134,7 @@
   font-size: 1.2rem;
   border: solid 1px hsl(0deg 0% 90%);
   box-shadow: 2px 2px hsl(0deg 0% 90%);
+
 }
 
 .commentauthor {
