@@ -55,6 +55,7 @@ div {
     font-weight: bold;
     margin-top: -5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .modal {
@@ -138,7 +139,7 @@ div {
 
 .hero > h1 {
     color: black;
-    font-size: 4.7rem;
+    font-size: 4.5rem;
     width: 450px;
     margin-left: 45px;
     padding-top: 30px;
@@ -217,6 +218,9 @@ div {
     .navlinks > ul {
         width: 100px;
     }
+    .hero {
+        height: 250px
+    }
     .hero > p {
         word-wrap: break-word;
         width: 90%;
@@ -225,6 +229,10 @@ div {
         font-size: 3rem;
         line-height: 45px;
         width: 350px;
+    }
+
+    .container {
+        padding: 5px;
     }
     /* .dropdown-content {
         left: -100px;

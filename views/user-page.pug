@@ -1,17 +1,27 @@
-<!DOCTYPE html>
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title User Profile
-        link(rel="stylesheet", href="/stylesheets/user-page.css")
-    body
-        div(class="header")
+extends layout
+block content
+    div(class="header")
+        div(class="flex-base")
             h1(class="user-name") #{user.firstName} #{user.lastName}
-            h4(class="user-follows") 9 Followers
-            h4(class="user-about") About
-            button(class="user-follow-button") Follow
-        div(class="articles")
-            each article in articles
-                h1=article.title
-                p=article.body
+            h4(class="user-follows") 
+                span(class="numFollows") #{numFollows} 
+                span Followers
+        //- h4(class="user-about") About
+        if session.auth
+            if isFollowing
+                button(class="user-unfollow-button" id=user.id) Following
+                button(class="user-follow-button hidden" id=user.id) Follow
+            if !isFollowing
+                button(class="user-unfollow-button hidden" id=user.id) Following
+                button(class="user-follow-button" id=user.id) Follow
+            div(class='hidden userId' id=session.auth.userId)
+    div(class="articles")
+        each article in articles
+            div(class="article")
+                h1
+                    a(href=`/articles/${article.id}` class="article-title-multi")=article.title
+                p(class="article-body-single")=article.body.substr(0, 300) + '...'
+                div(class="mb-40")
+                  a(class= 'read-more' href=`/articles/${article.id}`) Read More
+    script(src="/javascripts/follows.js")
+    

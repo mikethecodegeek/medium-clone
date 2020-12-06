@@ -5,10 +5,13 @@
     align-items: center;
 }
 
-.user-follow-button {
+/* .user-follow-button {
     width: 60px;
     height: 20px;
-}
+    border: 0;
+    background: none;
+    box-shadow: none;
+} */
 
 .articles {
     margin: 50px;
