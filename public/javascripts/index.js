@@ -17,10 +17,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
     let year = new Date().getFullYear();
     let dateShown =  `${month}/${day}/${year}`;
-    // console.log(userName.innerText);
-    // console.log(dateShown)
-    // let articleDiv = document.querySelector('.singleArticle');
-
+  
     let commentActive = false;
     function createComment() {
         let comment = document.createElement('input');
