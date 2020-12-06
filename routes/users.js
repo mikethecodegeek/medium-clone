@@ -239,12 +239,14 @@ router.get(
             return { title: article.title, body: article.body, id: article.id };
         });
         
-        const following = await FollowingUser.findOne({where:{userId: req.params.id,followerId:req.session.auth.userId}})
-      
         let isFollowing = false;
-        if (following) {
-            isFollowing=true;
+        if (req.session.auth) {
+            const following = await FollowingUser.findOne({where:{userId: req.params.id,followerId:req.session.auth.userId}})
+            if (following) {
+                isFollowing=true;
+            }
         }
+      
         res.render('user-page', { articles, user, isFollowing,numFollows });
     })
 );

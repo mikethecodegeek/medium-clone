@@ -12,8 +12,12 @@ router.get(
             include: User,
             orderBy: 'id'
         });
-        const following = await FollowingUser.findAll({where:{followerId:req.session.auth.userId},include:User})
-        console.log(following)
+        let following;
+        if (req.session.auth) {
+
+            following = await FollowingUser.findAll({where:{followerId:req.session.auth.userId},include:User})
+        }
+        
         res.render('index', { title: 'Poedium Home', articles,following });
     })
 );
