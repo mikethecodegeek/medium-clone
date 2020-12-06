@@ -58,7 +58,8 @@ router.delete(
     asyncHandler(async (req, res) => {
         const { userId, articleId } = req.body;
         const likes = await Like.findOne({ where: { userId, articleId } });
-        likes.forEach(async (el) => await el.destroy());
+        // likes.forEach(async (el) => await el.destroy()
+        await likes.destroy();
         res.json({ message: 'Deleted' });
     })
 );
