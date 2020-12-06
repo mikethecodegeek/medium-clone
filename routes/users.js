@@ -231,7 +231,7 @@ router.get(
 router.get(
     '/:id',
     asyncHandler(async (req, res) => {
-        const user = await User.findByPk(req.params.id, { include: Article });
+        const user = await User.findByPk(req.params.id, { include: Article,order: [[Article, 'createdAt', 'DESC']], });
         const followers = await FollowingUser.findAll({where:{userId:user.id}})
        
         let numFollows = followers.length;

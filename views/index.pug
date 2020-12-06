@@ -18,15 +18,15 @@ block content
     if following
       h2(class="trending-title") <i class="fas fa-user-friends"></i> LATEST FROM FOLLOWING
       div(class="articles-div mb-40")
-        each follow in following
+        each follow in following, i
           div(class="trending-article-box")
                a(href=`/users/${follow.User.id}` class="trending-article-name following-name") #{follow.User.userName}
           //- p=follow.User.userName
     h2(class="trending-title") <i class="far fa-arrow-alt-circle-down"></i> TRENDING ON POEDIUM
       div(class="articles-div")
-        each article in articles
+        each article,i in articles
           div(class="trending-article")
-            p(class="number") 0#{article.id}
+            p(class="number") 0#{i+1}
             div(class="trending-article-box")
                a(href=`/users/${article.User.id}` class="trending-article-name") #{article.User.firstName} #{article.User.lastName}
                a(href=`/articles/${article.id}` class="trending-article-title")=article.title
