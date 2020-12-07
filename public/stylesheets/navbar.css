@@ -132,7 +132,7 @@ div {
 
 .hero {
     background-color: #ffc017;
-    height: 400px;
+    height: 350px;
     color: black;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -169,6 +169,8 @@ div {
 .greeting {
     font-size: 1.5rem;
     font-weight: bold;
+    position: relative;
+    top:3px;
 }
 
 .user-icon {
@@ -214,12 +216,16 @@ div {
     }
     .logo {
         margin-left: 40px;
+       
     }
     .navlinks > ul {
         width: 100px;
     }
+    .navLinks > ul > div > li  {
+        font-size: .1rem;
+    }
     .hero {
-        height: 250px
+        height: 300px
     }
     .hero > p {
         word-wrap: break-word;
@@ -244,4 +250,17 @@ div {
     .user-menu {
         margin-left: 0px;
     }
+
+    @media (max-width: 523px) {
+        
+        .logo {
+            
+            font-size: 1.4rem;
+            position: relative;
+            top:3px; 
+        }
+        
+
+    }
+
 }
