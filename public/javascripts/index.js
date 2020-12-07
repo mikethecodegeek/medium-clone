@@ -9,11 +9,14 @@ window.addEventListener('DOMContentLoaded', (e) => {
     let article = document.querySelector('.singleArticle');
     let articleTitle = document.querySelector('.article-title-single');
     let newCommentBox = document.querySelector('.newcomment');
+    console.log(newCommentBox)
     let allComments = document.querySelector('.comments');
 
     let userName = document.querySelector('.username');
     let day = new Date().getDate();
     let month = new Date().getMonth();
+    month++;
+    console.log(month)
 
     let year = new Date().getFullYear();
     let dateShown = `${month}/${day}/${year}`;
