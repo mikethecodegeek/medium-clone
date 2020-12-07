@@ -19,6 +19,7 @@ block content
           p(class="unlike") <i class="fas fa-thumbs-up unlike"></i>
           span(id="like-count") #{likeCount}
           p <i class="far fa-comment-dots comment-button"></i>
+          span(id="comment-count") #{commentCount}
           div(class='newcomment hidden')
       else
         div(class='like-comment')
@@ -26,7 +27,18 @@ block content
           p(class="hidden unlike") <i class="fas fa-thumbs-up unlike"></i>
           span(id="like-count") #{likeCount}
           p <i class="far fa-comment-dots comment-button"></i>
+          span(id="comment-count") #{commentCount}
           div(class='newcomment hidden')  
+    
+    else
+      div(class='like-comment')
+        p <i class="far fa-thumbs-up like"></i> 
+        span(id="like-count") #{likeCount}
+        p <i class="far fa-comment-dots comment-button"></i>
+        span(id="comment-count") #{commentCount}
+
+
+    
     if session.auth
       if (session.auth.userId == article.userId)
         div(class="edit-article-button")

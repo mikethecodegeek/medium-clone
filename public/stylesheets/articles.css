@@ -221,6 +221,10 @@
   margin-left: 5px;
 }
 
+#comment-count {
+  margin-left: 5px;
+}
+
 .hidden {
   display: none;
   /* visibility: hidden; */
