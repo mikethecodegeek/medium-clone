@@ -41,14 +41,6 @@ router.get(
             };
         });
 
-        console.log('');
-        console.log('');
-        console.log('');
-        console.log(article.Comments);
-        console.log('');
-        console.log('');
-        console.log('');
-
         let commentCount = 0;
         article.Comments.forEach((comment) => commentCount++);
 
