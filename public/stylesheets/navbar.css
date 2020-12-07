@@ -7,12 +7,12 @@
 }
 
 .navbar {
+    background-color: hsl(44deg 100% 55%);
     justify-content: space-between;
     height: 75px;
     align-items: center;
     border-bottom: solid black thin;
     padding-top: 5px;
-    background-color: black;
 }
 
 .yellow {
@@ -55,7 +55,7 @@ div {
     font-weight: bold;
     margin-top: -5px;
     cursor: pointer;
-    color: white;
+    text-decoration: none;
 }
 
 .logo-black {
@@ -136,14 +136,14 @@ div {
 
 .hero {
     background-color: #ffc017;
-    height: 450px;
+    height: 400px;
     color: black;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .hero > h1 {
     color: black;
-    font-size: 4.7rem;
+    font-size: 4.5rem;
     width: 450px;
     margin-left: 45px;
     padding-top: 30px;
@@ -173,16 +173,16 @@ div {
 .greeting {
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
 }
 
 .user-icon {
     font-size: 1.5rem;
-    color: white;
+
     /* position: relative;
       left: 100px; */
     /* top: 30px */
 }
+
 .user-menu {
     margin-left: 250px;
 }
@@ -192,6 +192,7 @@ div {
     display: inline-block;
     cursor: pointer;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -202,6 +203,7 @@ div {
     z-index: 1;
     left: -100px;
 }
+
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
@@ -210,7 +212,6 @@ div {
     margin-top: 10px;
     text-decoration: none;
 }
-
 @media (max-width: 770px) {
     .lg-only {
         display: none;
@@ -221,6 +222,9 @@ div {
     .navlinks > ul {
         width: 100px;
     }
+    .hero {
+        height: 250px
+    }
     .hero > p {
         word-wrap: break-word;
         width: 90%;
@@ -229,6 +233,10 @@ div {
         font-size: 3rem;
         line-height: 45px;
         width: 350px;
+    }
+
+    .container {
+        padding: 5px;
     }
     /* .dropdown-content {
         left: -100px;

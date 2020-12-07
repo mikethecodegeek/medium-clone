@@ -6,3 +6,8 @@ module.exports = {
   'seeders-path': path.resolve('db', 'seeders'),
   'migrations-path': path.resolve('db', 'migrations')
 };
+  // production: {
+  //   use_env_variable: 'DATABASE_URL',
+  //   dialect: 'postgres',
+  //   seederStorage: 'sequelize',
+  // }

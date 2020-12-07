@@ -2,7 +2,7 @@ doctype html
 html
   head
       block head
-        title="Medium Clone"
+        title="Poedium"
         link(rel='stylesheet' href='/stylesheets/reset.css')
         link(rel="stylesheet", href="/stylesheets/navbar.css")
         link(rel="stylesheet", href="/stylesheets/articles.css")
@@ -12,29 +12,32 @@ html
   body
     if !session.auth
       div(class="navbar yellow")
-        div(class="logo logo-black") <i class="fas fa-crow"></i> Poedium
+        div
+          a(href="/" class="logo logo-black") <i class="fas fa-crow"></i> Poedium
         div(class="navlinks")
           ul
             li(class="lg-only") Our Story
             li(class="lg-only") Membership
             li(class="lg-only") Write
-            li 
-                a(href="/users/login" id="login" ) Login     
-          a(href="/users/new" id="getStarted" class= 'get_started_button') Get Started       
+            li
+                a(href="/users/login" id="login" ) Login
+          a(href="/users/new" id="getStarted" class= 'get_started_button') Get Started
     if session.auth
       div(class="navbar")
-        div(class="logo") <i class="fas fa-crow"></i> Poedium
+        div
+          a(href="/" class="logo") <i class="fas fa-crow"></i> Poedium
         div(class="greeting lg-only") Hello #{session.auth.userName}
         div(class="navlinks")
           ul
             //- li(class="lg-only") Our Story
             //- li(class="lg-only") Membership
             div(class="user-menu")
-              li(class="dropdown") 
+              li(class="dropdown")
                 <i class="fas fa-user user-icon"></i>
-                div(class="dropdown-content") 
-                  a(href="/users/logout" id="logout" ) Logout 
+                div(class="dropdown-content")
+                  a(href="/users/logout" id="logout" ) Logout
                   a(href="/articles/new" id="newPoem" ) Write a poem
-    script(src="/javascripts/index.js")
-            
+                  a(href=`/users/${session.auth.userId}` id="myPoems" ) My Poems
+    //- script(src="/javascripts/index.js")
+
     block content

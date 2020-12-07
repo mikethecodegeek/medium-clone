@@ -2,16 +2,22 @@ window.addEventListener('DOMContentLoaded', (e) => {
     let homeButton = document.querySelector('.logo');
     homeButton.classList.toggle('.logo-black');
 
-    homeButton.addEventListener('click', () => {
-        window.location = 'http://localhost:8080';
-    });
+    // homeButton.addEventListener('click', () => {
+    //     window.location = 'http://localhost:8080';
+    // });
 
     let commentButton = document.querySelector('.comment-button');
     let article = document.querySelector('.singleArticle');
     let articleTitle = document.querySelector('.article-title-single');
     let newCommentBox = document.querySelector('.newcomment');
     let allComments = document.querySelector('.comments');
-    // let articleDiv = document.querySelector('.singleArticle');
+
+    let userName = document.querySelector('.username');
+    let day = new Date().getDate();
+    let month = new Date().getMonth();
+
+    let year = new Date().getFullYear();
+    let dateShown = `${month}/${day}/${year}`;
 
     let commentActive = false;
     function createComment() {
@@ -50,7 +56,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
                     let p = document.createElement('p');
                     let div = document.createElement('div');
                     div.setAttribute('class', 'commentsdiv');
-                    p.innerText = body;
+                    p.innerHTML = `<p class="commentbody">${body}</p> <p class="commentauthor">${userName.innerText}</p><p class="commentdate">${dateShown}</p>`;
                     div.appendChild(p);
                     allComments.prepend(div);
                     bodyText.value = '';
@@ -82,7 +88,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
             likeButton.classList.add('hidden');
             // likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i>';
-            
+
             document.querySelector('.unlike').classList.remove('hidden');
 
             res.json();
@@ -117,4 +123,23 @@ window.addEventListener('DOMContentLoaded', (e) => {
             res.json();
         });
     });
+
+    // async function follow() {
+    //     const followButton = document.querySelector('.user-follow-button');
+    //     const followerId = document.querySelector('.userId').value;
+    //     const userId = followButton.id;
+    //     const follow ={userId,followerId};
+    //     await fetch('/api/follow', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(follow),
+    //     }).then((res) => {
+
+    //         followButton.innerText = 'following'
+    //         res.json();
+    //     });
+
+    // }
 });
