@@ -1,2 +1,2 @@
-# Medium-Clone
-Full stack application clone of Medium.com
+# Podium
+A clone of Medium.com
