@@ -16,8 +16,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
     let month = new Date().getMonth();
 
     let year = new Date().getFullYear();
-    let dateShown =  `${month}/${day}/${year}`;
-  
+    let dateShown = `${month}/${day}/${year}`;
+
     let commentActive = false;
     function createComment() {
         let comment = document.createElement('input');
@@ -42,6 +42,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
         let bodyText = document.querySelector('.new-comment-box');
         let body = bodyText.value;
         let comment = { articleId, userId, body };
+
         if (e.target.textContent == 'Submit') {
             let newComment = await fetch('/api/new-comment', {
                 method: 'post',
@@ -60,7 +61,12 @@ window.addEventListener('DOMContentLoaded', (e) => {
                     allComments.prepend(div);
                     bodyText.value = '';
                     newCommentBox.classList.toggle('hidden');
-                }); 
+                    
+                    let commentCount = document.getElementById('comment-count');
+                    let comments = parseInt(commentCount.innerText, 10);
+                    comments++;
+                    commentCount.innerText = comments;
+                });
         }
     });
 
@@ -87,13 +93,13 @@ window.addEventListener('DOMContentLoaded', (e) => {
 
             likeButton.classList.add('hidden');
             // likeButton.innerHTML = '<i class="fas fa-thumbs-up"></i>';
-            
+
             document.querySelector('.unlike').classList.remove('hidden');
 
             res.json();
         });
     });
-    const unlikeButton = document.querySelector('.unlike')
+    const unlikeButton = document.querySelector('.unlike');
     unlikeButton.addEventListener('click', async () => {
         let articleId = article.getAttribute('id');
         articleId = parseInt(articleId, 10);
@@ -135,7 +141,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
     //         },
     //         body: JSON.stringify(follow),
     //     }).then((res) => {
-           
+
     //         followButton.innerText = 'following'
     //         res.json();
     //     });

@@ -28,7 +28,7 @@ router.get(
     '/:id',
     asyncHandler(async (req, res) => {
         const article = await Article.findByPk(req.params.id, {
-            include: [User,{model: Comment, include: [User]}], 
+            include: [User, { model: Comment, include: [User] }],
             order: [[Comment, 'createdAt', 'DESC']],
         });
 
@@ -39,8 +39,10 @@ router.get(
                 articleId: comm.articleId,
                 body: comm.body,
             };
-    
         });
+
+        let commentCount = 0;
+        article.Comments.forEach((comment) => commentCount++);
 
         const { id } = article.dataValues;
 
@@ -69,7 +71,7 @@ router.get(
 
         likeCount = totalLikes.length;
 
-        res.render('article-single', { article, comments, likeCount, isLiked });
+        res.render('article-single', { article, comments, likeCount, isLiked, commentCount });
     })
 );
 
