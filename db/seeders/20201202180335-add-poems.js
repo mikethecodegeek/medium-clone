@@ -6,7 +6,8 @@ module.exports = {
             'Articles',
             [
                 {
-                    body: `A dark unfathomed tide
+                    body: `
+                    A dark unfathomed tide
                     Of interminable pride -
                     A mystery, and a dream,
                     Should my early life seem;
@@ -33,7 +34,9 @@ module.exports = {
                     updatedAt: new Date(),
                 },
                 {
-                    body: `Science! true daughter of Old Time thou art!
+                    body: 
+                    `
+                Science! true daughter of Old Time thou art!
                   Who alterest all things with thy peering eyes.
                 Why preyest thou thus upon the poet's heart,
                   Vulture, whose wings are dull realities?
@@ -54,33 +57,34 @@ module.exports = {
                     updatedAt: new Date(),
                 },
                 {
-                    body: `Gaily bedight,
-                  A gallant knight,
-              In sunshine and in shadow,
-                  Had journeyed long,
-                  Singing a song,
-              In search of Eldorado.
+                    body: `
+                    Gaily bedight,
+                    A gallant knight,
+                    In sunshine and in shadow,
+                    Had journeyed long,
+                    Singing a song,
+                    In search of Eldorado.
 
-                  But he grew old-
-                  This knight so bold-
-              And o'er his heart a shadow
-                  Fell as he found
-                  No spot of ground
-              That looked like Eldorado.
+                    But he grew old-
+                    This knight so bold-
+                    And o'er his heart a shadow
+                    Fell as he found
+                    No spot of ground
+                    That looked like Eldorado.
 
-                  And, as his strength
-                  Failed him at length,
-              He met a pilgrim shadow-
-                  "Shadow," said he,
-                  "Where can it be-
-              This land of Eldorado?"
+                    And, as his strength
+                    Failed him at length,
+                    He met a pilgrim shadow-
+                    "Shadow," said he,
+                    "Where can it be-
+                    This land of Eldorado?"
 
-                  "Over the Mountains
-                  Of the Moon,
-              Down the Valley of the Shadow,
-                  Ride, boldly ride,"
-                  The shade replied-
-              "If you seek for Eldorado!"`,
+                    "Over the Mountains
+                    Of the Moon,
+                    Down the Valley of the Shadow,
+                    Ride, boldly ride,"
+                    The shade replied-
+                    "If you seek for Eldorado!"`,
                     title: 'Eldorado',
                     userId: 3,
                     imgLink: 'dummy',
@@ -88,7 +92,8 @@ module.exports = {
                     updatedAt: new Date(),
                 },
                 {
-                    body: `In spring of youth it was my lot
+                    body: `
+                In spring of youth it was my lot
                 To haunt of the wide world a spot
                 The which I could not love the less-
                 So lovely was the loneliness
@@ -121,7 +126,8 @@ module.exports = {
                     updatedAt: new Date(),
                 },
                 {
-                    body: `Dim vales- and shadowy floods-
+                    body: `
+              Dim vales- and shadowy floods-
               And cloudy-looking woods,
               Whose forms we can't discover
               For the tears that drip all over!
@@ -174,7 +180,8 @@ module.exports = {
                     updatedAt: new Date(),
                 },
                 {
-                    body: `Once upon a midnight dreary, while I pondered, weak and weary,
+                    body: `
+              Once upon a midnight dreary, while I pondered, weak and weary,
             Over many a quaint and curious volume of forgotten lore,
               While I nodded, nearly napping, suddenly there came a tapping,
              As of some one gently rapping, rapping at my chamber door.
@@ -202,50 +209,46 @@ module.exports = {
             That I scarce was sure I heard you"- here I opened wide the door;-
                           Darkness there, and nothing more.
           
-              Deep into that darkness peering, long I stood there wondering,
-                  fearing,
+            Deep into that darkness peering, long I stood there wondering, fearing,
             Doubting, dreaming dreams no mortals ever dared to dream before;
               But the silence was unbroken, and the stillness gave no token,
               And the only word there spoken was the whispered word, "Lenore!"
             This I whispered, and an echo murmured back the word, "Lenore!"-
                           Merely this, and nothing more.
           
-              Back into the chamber turning, all my soul within me burning,
+            Back into the chamber turning, all my soul within me burning,
              Soon again I heard a tapping somewhat louder than before.
               "Surely," said I, "surely that is something at my window lattice:
               Let me see, then, what thereat is, and this mystery explore-
             Let my heart be still a moment and this mystery explore;-
                           'Tis the wind and nothing more."
           
-              Open here I flung the shutter, when, with many a flirt and
-                  flutter,
-            In there stepped a stately raven of the saintly days of yore;
-              Not the least obeisance made he; not a minute stopped or stayed
-                  he;
+            Open here I flung the shutter, when, with many a flirt and flutter,
+              In there stepped a stately raven of the saintly days of yore;
+            Not the least obeisance made he; not a minute stopped or stayed he;
               But, with mien of lord or lady, perched above my chamber door-
             Perched upon a bust of Pallas just above my chamber door-
                           Perched, and sat, and nothing more.
           
-             Then this ebony bird beguiling my sad fancy into smiling,
-            By the grave and stern decorum of the countenance it wore.
-             "Though thy crest be shorn and shaven, thou," I said, "art sure no
-                  craven,
+            Then this ebony bird beguiling my sad fancy into smiling,
+              By the grave and stern decorum of the countenance it wore.
+               "Though thy crest be shorn and shaven, thou," 
+                          I said, "art sure no craven,
              Ghastly grim and ancient raven wandering from the Nightly shore-
             Tell me what thy lordly name is on the Night's Plutonian shore!"
                           Quoth the Raven, "Nevermore."
           
-              Much I marvelled this ungainly fowl to hear discourse so plainly,
-            Though its answer little meaning- little relevancy bore;
-              For we cannot help agreeing that no living human being
+            Much I marvelled this ungainly fowl to hear discourse so plainly,
+              Though its answer little meaning- little relevancy bore;
+                For we cannot help agreeing that no living human being
               Ever yet was blest with seeing bird above his chamber door-
             Bird or beast upon the sculptured bust above his chamber door,
                           With such name as "Nevermore."
           
-              But the raven, sitting lonely on the placid bust, spoke only
-            That one word, as if his soul in that one word he did outpour.
-              Nothing further then he uttered- not a feather then he fluttered-
-              Till I scarcely more than muttered, "other friends have flown
-                  before-
+            But the raven, sitting lonely on the placid bust, spoke only
+              That one word, as if his soul in that one word he did outpour.
+                Nothing further then he uttered- not a feather then he fluttered-
+              Till I scarcely more than muttered, "other friends have flown before-
             On the morrow he will leave me, as my hopes have flown before."
                           Then the bird said, "Nevermore."
           
@@ -254,11 +257,11 @@ module.exports = {
                Caught from some unhappy master whom unmerciful Disaster
                Followed fast and followed faster till his songs one burden bore-
             Till the dirges of his Hope that melancholy burden bore
-                          Of 'Never- nevermore'."
+                           Of 'Never- nevermore'."
           
               But the Raven still beguiling all my fancy into smiling,
-            Straight I wheeled a cushioned seat in front of bird, and bust and
-                  door;
+                Straight I wheeled a cushioned seat in front of bird, 
+                            and bust and door;
               Then upon the velvet sinking, I betook myself to linking
               Fancy unto fancy, thinking what this ominous bird of yore-
             What this grim, ungainly, ghastly, gaunt and ominous bird of yore
@@ -273,42 +276,40 @@ module.exports = {
           
               Then methought the air grew denser, perfumed from an unseen censer
             Swung by Seraphim whose footfalls tinkled on the tufted floor.
-              "Wretch," I cried, "thy God hath lent thee- by these angels he
-                  hath sent thee
+                "Wretch," I cried, "thy God hath lent thee- 
+                       by these angels he  hath sent thee
               Respite- respite and nepenthe, from thy memories of Lenore!
             Quaff, oh quaff this kind nepenthe and forget this lost Lenore!"
                           Quoth the Raven, "Nevermore."
           
-              "Prophet!" said I, "thing of evil!- prophet still, if bird or
-                  devil!-
+              "Prophet!" said I, "thing of evil!- prophet still, 
+                          if bird or devil!-
             Whether Tempter sent, or whether tempest tossed thee here ashore,
               Desolate yet all undaunted, on this desert land enchanted-
               On this home by horror haunted- tell me truly, I implore-
             Is there- is there balm in Gilead?- tell me- tell me, I implore!"
                           Quoth the Raven, "Nevermore."
           
-              "Prophet!" said I, "thing of evil- prophet still, if bird or
-                  devil!
+              "Prophet!" said I, "thing of evil- prophet still, 
+                           if bird or devil!
             By that Heaven that bends above us- by that God we both adore-
               Tell this soul with sorrow laden if, within the distant Aidenn,
               It shall clasp a sainted maiden whom the angels name Lenore-
             Clasp a rare and radiant maiden whom the angels name Lenore."
                           Quoth the Raven, "Nevermore."
           
-              "Be that word our sign in parting, bird or fiend," I shrieked,
-                  upstarting-
+            "Be that word our sign in parting, bird or fiend," I shrieked,
+                             upstarting-
             "Get thee back into the tempest and the Night's Plutonian shore!
               Leave no black plume as a token of that lie thy soul hath spoken!
               Leave my loneliness unbroken!- quit the bust above my door!
-            Take thy beak from out my heart, and take thy form from off my
-                  door!"
+            Take thy beak from out my heart, and take thy form from off my door!"
                          Quoth the Raven, "Nevermore."
           
               And the Raven, never flitting, still is sitting, still is sitting
             On the pallid bust of Pallas just above my chamber door;
               And his eyes have all the seeming of a demon's that is dreaming,
-              And the lamplight o'er him streaming throws his shadow on the
-                  floor;
+            And the lamplight o'er him streaming throws his shadow on the floor;
             And my soul from out that shadow that lies floating on the floor
                           Shall be lifted- nevermore!`,
                     title: 'The Raven',

@@ -23,5 +23,11 @@ block content
                 p(class="article-body-single")=article.body.substr(0, 300) + '...'
                 div(class="mb-40")
                   a(class= 'read-more' href=`/articles/${article.id}`) Read More
+                 if session.auth
+            if (session.auth.userId == article.userId)
+                div(class="edit-article-button")
+                a(href=`/articles/${article.id}/edit` class="heroButton editArticle edit-article-button") Edit Poem
+    
+              
     script(src="/javascripts/follows.js")
     
