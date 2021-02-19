@@ -34,6 +34,52 @@ module.exports = {
                     updatedAt: new Date(),
                 },
                 {
+                    body: `
+                    "You cannot swim for new horizons until you have courage to lose sight of the shore."
+
+                    ----------------
+
+                    the crow Bijou ceased to beseech,
+                    a timorous speech, seeking the half-truths
+                    beneath a black mass of kraken-ish teeth,
+                    seized Icarus, a tragedy past-due. 
+
+                    a shattering splash crashed brackish and blue,
+                    and there breached, thrashing, a dragon-ish beast,
+                    fastened to feet and beak seemingly glued,
+                    the crow Bijou ceased to beseech. 
+
+                    unseen from under the shadowy deeps,
+                    a flutter, a crunch, then suddenly food.
+                    the wail of boatswain pales then peaks,
+                    a timorous speech, seeking the half-truths 
+
+                    frantically grabbing at vanishing shoes,
+                    mannequins lacking their muscle and meat,
+                    of battling past a panicking crew,
+                    beneath a black mass of kraken-ish teeth, 
+
+                    then quietly breathe. leviathan squeeze
+                    hope, flickering scene to collapse to.
+                    choking on mast-wood, and splintering beams
+                    seized Icarus, a tragedy past-due. 
+
+                    a wave's brine lines this lagan-ish tomb,
+                    where graves lie rotten but peaceful at sea,
+                    softened and mauled, flotsam up through the gloom,
+                    sodden and trawled as a cautioned debris,
+                    a ghoulish cue that we never lose view
+                    of the trees that grew like beacons on beach...
+
+                    the crow Bijou ceased to beseech.
+                   `,
+                    title: 'Imitation',
+                    userId: 1,
+                    imgLink: 'dummy',
+                    createdAt: new Date(),
+                    updatedAt: new Date(),
+                },
+                {
                     body: 
                     `
                 Science! true daughter of Old Time thou art!

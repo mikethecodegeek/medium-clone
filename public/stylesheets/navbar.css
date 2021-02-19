@@ -210,6 +210,39 @@ div {
     margin-top: 10px;
     text-decoration: none;
 }
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.footer > div> a {
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.footer > div > a:hover {
+   color: #ffc017;
+   position: relative;
+   top:-2px;
+    
+}
+
+.flex-footer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 32%;
+}
 @media (max-width: 770px) {
     .lg-only {
         display: none;
