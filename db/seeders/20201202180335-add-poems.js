@@ -35,7 +35,8 @@ module.exports = {
                 },
                 {
                     body: `
-                    "You cannot swim for new horizons until you have courage to lose sight of the shore."
+                    "You cannot swim for new horizons until you have courage 
+                    to lose sight of the shore."
 
                     ----------------
 
