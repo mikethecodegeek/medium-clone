@@ -1,0 +1,1000 @@
+ 1015  rm -rf __MACOSX/
+ 1016  ls
+ 1017  cd starter
+ 1018  ls
+ 1019  touch .env .flaskenv
+ 1020  code .
+ 1021  pipme
+ 1022  pipenv run pyteat
+ 1023  pipenv run pytest
+ 1024  cd ,,
+ 1025  cd ..
+ 1026  ls
+ 1027  rm -rf starter
+ 1028  unzip Flask_Practice_assessment.zip 
+ 1029  rm -rf __MACOSX/
+ 1030  cd starter
+ 1031  ls
+ 1032  touch .flaskenv .env
+ 1033  code .
+ 1034  pipme
+ 1035  cd ..
+ 1036  ls
+ 1037  rm -rf starter
+ 1038  unzip Flask_Practice_assessment.zip 
+ 1039  rm -rf __MACOSX/
+ 1040  ;s
+ 1041  ls
+ 1042  clear
+ 1043  ls
+ 1044  cd starter
+ 1045  ls
+ 1046  touch .env .flaskenv
+ 1047  code .
+ 1048  pipme
+ 1049  cd ..
+ 1050  rm -rf starter
+ 1051  ls
+ 1052  unzip Flask_Practice_assessment.zip 
+ 1053  ls
+ 1054  rm -rf __MACOSX/
+ 1055  cd starter
+ 1056  ls
+ 1057  la
+ 1058  touch .env
+ 1059  pipme
+ 1060  code .
+ 1061  pipme
+ 1062  ls
+ 1063  cd ..
+ 1064  ls
+ 1065  rm -rf starter
+ 1066  unzip Flask_Practice_assessment.zip 
+ 1067  rm -rf __MACOSX/
+ 1068  cd starter
+ 1069  touch .env
+ 1070  ls
+ 1071  code .
+ 1072  pipme
+ 1073  traceroute
+ 1074  traceroute -I google.com
+ 1075  traceroute -I appacadaemy.com
+ 1076  traceroute -I appacademy.com
+ 1077  sudo traceroute -I google.com
+ 1078  cd ..
+ 1079  ls
+ 1080  cd practice/
+ 1081  ls
+ 1082  rm -rf starter
+ 1083  unzip Flask_Practice_assessment.zip 
+ 1084  rm -rf __MACOSX/
+ 1085  cd starter
+ 1086  ls
+ 1087  code .
+ 1088  touch .env
+ 1089  pipme
+ 1090  pipenv run flask run
+ 1091  pipenv run pytest
+ 1092  ls
+ 1093  rm -rf starter
+ 1094  unzip Flask_Practice_assessment.zip 
+ 1095  rm -rf __
+ 1096  rm -rf __MACOSX/
+ 1097  cd starter
+ 1098  touch .env
+ 1099  code .
+ 1100  pipme
+ 1101  pipenv run pytest
+ 1102  d .
+ 1103  cd ..
+ 1104  mkdir assessment
+ 1105  cd assessment/
+ 1106  ls
+ 1107  git clone https://github.com/appacademy/assessment-full-stack-python
+ 1108  ls
+ 1109  cd assessment-full-stack-python/
+ 1110  ls
+ 1111  code .
+ 1112  pipme
+ 1113  clear
+ 1114  psql
+ 1115  clear
+ 1116  pipenv run flask db init
+ 1117  pipenv run flask db migrate -m 'created instrument'
+ 1118  pipenv run flask db migrate upgrade
+ 1119  pipenv run flask db upgrade
+ 1120  pipenv run flask run
+ 1121  pipenv run pytest
+ 1122  pipenv run flask run
+ 1123  pipenv run pytest
+ 1124  pipenv run flask run
+ 1125  pipenv run pytest
+ 1126  pipenv run flask run
+ 1127  pipenv run pytest
+ 1128  pipenv run flask run
+ 1129  pipenv run pytest
+ 1130  clear
+ 1131  pipenv run pytest
+ 1132  ls
+ 1133  la
+ 1134  cd ..
+ 1135  ls
+ 1136  zip -r assessment-full-stack-python.zip assessment-full-stack-python/
+ 1137  explorer.exe .
+ 1138  ls
+ 1139  cd assessment-full-stack-python/
+ 1140  ls
+ 1141  pipme
+ 1142  pipenv run pytest
+ 1143  cd AppAcademy/
+ 1144  cd w18
+ 1145  ls
+ 1146  cd assessment/
+ 1147  ls
+ 1148  cd assessment-full-stack-python/
+ 1149  pipenv run flask
+ 1150  pipenv run flask run
+ 1151  container
+ 1152  docker container stop nginx
+ 1153  docker ps a
+ 1154  docker --verstion
+ 1155  docker --version
+ 1156  touch anything.txt
+ 1157  flask db upgrade
+ 1158  flask seed all
+ 1159  flask run
+ 1160  heroku container login
+ 1161  exit
+ 1162  cd react-app/
+ 1163  ls
+ 1164  npm start
+ 1165  npm install
+ 1166  npm start
+ 1167  flask db init
+ 1168  db init
+ 1169  pipenv install
+ 1170  flask db init
+ 1171  flask db migrate -m 'first'
+ 1172  exit
+ 1173  cd app
+ 1174  pipenv run flask db upgrade
+ 1175  ls
+ 1176  cd seeds
+ 1177  ls
+ 1178  python3 users.py 
+ 1179  cd ..
+ 1180  cd .
+ 1181  cd ..
+ 1182  ls
+ 1183  cd ..
+ 1184  ls
+ 1185  cd w19
+ 1186  cd ..
+ 1187  cd w20
+ 1188  ls
+ 1189  cd Photeria/
+ 1190  cd app
+ 1191  pipenv run flask seed all
+ 1192  cd ..
+ 1193  ls
+ 1194  git add .
+ 1195  git commit -m 'user seeds done'
+ 1196  git push
+ 1197  cd app
+ 1198  pipenv shell
+ 1199  flask seed undo
+ 1200  flask seed all
+ 1201  flask seed undo
+ 1202  flask seed all
+ 1203  flask seed undo
+ 1204  flask seed post
+ 1205  flask seed posts
+ 1206  flask seed all
+ 1207  flask seed undo
+ 1208  flask seed all
+ 1209  flask downgrade
+ 1210  flask db downgrade
+ 1211  flask db migrate -m 'first'
+ 1212  flask upgrade
+ 1213  flask db upgrade
+ 1214  flask seed all
+ 1215  flask db downgrade
+ 1216  flask db upgrade
+ 1217  flask seed all
+ 1218  flask db downgrade
+ 1219  flask db upgrade
+ 1220  flask db downgrade
+ 1221  flask db upgrade
+ 1222  flask seed all
+ 1223  flask db downgrade
+ 1224  flask db upgrade
+ 1225  flask seed all
+ 1226  flask db downgrade
+ 1227  flask db upgrade
+ 1228  flask seed all
+ 1229  flask db downgrade
+ 1230  flask db upgrade
+ 1231  flask seed all
+ 1232  flask db downgrade
+ 1233  flask db upgrade
+ 1234  flask seed all
+ 1235  git add .
+ 1236  git branch
+ 1237  git commit -m 'seeding almost done'
+ 1238  git push
+ 1239  cd app
+ 1240  pipenv run flask run
+ 1241  git status
+ 1242  cd app
+ 1243  pipenv run flask run
+ 1244  cd ..
+ 1245  git branch main
+ 1246  git checkout main
+ 1247  git status
+ 1248  git add .
+ 1249  git commit -m 'testing photo component'
+ 1250  git branch main
+ 1251  git checkuot main
+ 1252  git checkout main
+ 1253  clear
+ 1254  git pull
+ 1255  git checkout mikefollowing 
+ 1256  git merge main
+ 1257  cd app/
+ 1258  pipenv run flask run
+ 1259  cd ..
+ 1260  git status
+ 1261  git commit -m 'follow component done'
+ 1262  git add .
+ 1263  git commit -m 'follow component done'
+ 1264  git checkout main
+ 1265  git pull origin
+ 1266  git checkout mikefollowing
+ 1267  git merge main
+ 1268  git push origin mikefollowing 
+ 1269  pipenv run flask run
+ 1270  git checkout main
+ 1271  git status
+ 1272  git add .
+ 1273  git commit -m 'following done'
+ 1274  git branch main
+ 1275  git checkout main
+ 1276  git pull
+ 1277  git checkout mikefollowing 
+ 1278  git merge main
+ 1279  pipenv run flask run
+ 1280  git add .
+ 1281  git commit -m 'i dont know'
+ 1282  git checkout main
+ 1283  pipenv run flask run
+ 1284  git add .
+ 1285  git commit - 'follow integrated into feed'
+ 1286  git commit -m 'follow integrated into feed'
+ 1287  git branch sharedWork
+ 1288  git fetch origin main
+ 1289  git checkout shareWord
+ 1290  git checkout shareWork
+ 1291  git checkout sharedWork 
+ 1292  git push origin sharedWork
+ 1293  cd app/
+ 1294  pipenv run flask run
+ 1295  cd ..
+ 1296  git add .
+ 1297  git commit -m 'fixed annoying auth issue'
+ 1298  git push origin sharedWork 
+ 1299  cd app
+ 1300  pipenv run flask run
+ 1301  cd ..
+ 1302  git add .
+ 1303  git commit -m 'can now click on user profile'
+ 1304  git push origin shareWork
+ 1305  git push origin sharedWork 
+ 1306  cd app
+ 1307  pipenv run flask run
+ 1308  clear
+ 1309  pipenv run flask run
+ 1310  clear
+ 1311  pipenv run flask run
+ 1312  git checkout main
+ 1313  pipenv run flask run
+ 1314  git stash
+ 1315  pipenv run flask rub
+ 1316  pipenv run flask run
+ 1317  git checkout main
+ 1318  pipenv run flask run
+ 1319  cd AppAcademy/
+ 1320  ls
+ 1321  cd w20
+ 1322  ls
+ 1323  cd Photeria/
+ 1324  ls
+ 1325  cd react-app/
+ 1326  npm start
+ 1327  ls
+ 1328  cd frontend/
+ 1329  ls
+ 1330  npm start
+ 1331  cd app/
+ 1332  pipenv run flask run
+ 1333  git checkout sharedWork
+ 1334  pipenv run flask run
+ 1335  git checkout main
+ 1336  pipenv run flask run
+ 1337  cd ..
+ 1338  git checkout sharedWork 
+ 1339  git dif main
+ 1340  git diff main
+ 1341  cd app
+ 1342  pipenv run flask run
+ 1343  cd 
+ 1344  cd AppAcademy/w20/Photeria/
+ 1345  git status
+ 1346  git add .
+ 1347  git commit -m 'fixed login again'
+ 1348  git push origin sharedWork 
+ 1349  cd app
+ 1350  pipenv run flask run
+ 1351  git add .
+ 1352  git commit -m 'login logout buttons implemented (sorta)'
+ 1353  cd ..
+ 1354  git add .
+ 1355  git commit -m 'login logout buttons implemented (sorta)'
+ 1356  git checkout main
+ 1357  git pull
+ 1358  cd react-app/
+ 1359  cd ..
+ 1360  cd app/
+ 1361  pipenv run flask run
+ 1362  git checkout sharedWork 
+ 1363  git merge main
+ 1364  pipenv run flask run
+ 1365  cd ..
+ 1366  git push origin sharedWork 
+ 1367  git checkout main
+ 1368  git pull origin main
+ 1369  cd app
+ 1370  pipenv run flask run
+ 1371  cd ..
+ 1372  git pull origin
+ 1373  cd app
+ 1374  pipenv run flask run
+ 1375  ls
+ 1376  cd auth-front-end/
+ 1377  npm start
+ 1378  npm start
+ 1379  git status
+ 1380  git add .
+ 1381  git commit -m 'it works'
+ 1382  git remote show origin
+ 1383  git push origin master
+ 1384  git push heroku
+ 1385  cd auth-front-end/
+ 1386  npm build
+ 1387  npm run build
+ 1388  cd ..
+ 1389  npm run build
+ 1390  cd auth-backend/
+ 1391  npm run build
+ 1392  cd ..
+ 1393  git status
+ 1394  git add .
+ 1395  git status
+ 1396  git add .
+ 1397  git status
+ 1398  git commit -m 'i dunno'
+ 1399  git push heroku
+ 1400  cd auth-backend/
+ 1401  npx dotenv -- sequelize seed:generate --name Beer-seeder
+ 1402  npx dotenv -- sequelize seed:generate --name Brewery-Seeder
+ 1403  npx dotenv -- sequelize seed:generate --name Brewery-Type-Seeder
+ 1404  npx dotenv -- sequelize seed:generate --name Types-Seeder
+ 1405  cd ..
+ 1406  git status
+ 1407  git add .
+ 1408  git commit -m 'some seeders'
+ 1409  git push heroku
+ 1410  heroku run npm run sequelize db:migrate:undo
+ 1411  heroku run npm run sequelize db:migrate
+ 1412  git add .
+ 1413  git commit -m 'db ssl for heroku'
+ 1414  git push heroku
+ 1415  heroku run npm run sequelize db:migrate
+ 1416  heroku run npm run sequelize db:seed:all
+ 1417  git add .
+ 1418  git commit -m 'fixed a weird import'
+ 1419  git push heroku
+ 1420  heroku run npm run sequelize db:migrate
+ 1421  heroku run npm run sequelize db:seed:all
+ 1422  psql
+ 1423  npx dotenv -- sequelize db:migrate
+ 1424  cd auth-backend/
+ 1425  npx dotenv -- sequelize db:migrate
+ 1426  psql
+ 1427  npx dotenv -- sequelize db:migrate
+ 1428  npx dotenv -- sequelize db:seed:all
+ 1429  psql
+ 1430  npx dotenv -- sequelize db:migrate
+ 1431  npx dotenv -- sequelize db:seed:all
+ 1432  psql
+ 1433  npx dotenv -- sequelize db:migrate
+ 1434  npx dotenv -- sequelize db:seed:all
+ 1435  npm start
+ 1436  cd ..
+ 1437  git status
+ 1438  git add .
+ 1439  git commit -m 'some seeder files'
+ 1440  git push heroku
+ 1441  heroku run npm run sequelize db:migrate
+ 1442  heroku run npm run sequelize db:seed:all
+ 1443  git status
+ 1444  heroku run npm run sequelize db:migrate
+ 1445  heroku run npm run sequelize db:seed:all
+ 1446  git add .
+ 1447  git commit -m 'fixed seeder data'
+ 1448  git push heroku
+ 1449  heroku run npm run sequelize db:seed:undo
+ 1450  heroku run npm run sequelize db:seed:all
+ 1451  heroku run npm run sequelize db:migrate
+ 1452  heroku run npm run sequelize db:seed:all
+ 1453  git add .
+ 1454  git commit -m 'fixed guinness logo'
+ 1455  git push heroku
+ 1456  heroku run npm run sequelize db:migrate
+ 1457  heroku run npm run sequelize db:seed:all
+ 1458  git remote show origin
+ 1459  git push origin master
+ 1460  npm start
+ 1461  npx dotenv -- sequelize db:migrate
+ 1462  npx dotenv -- sequelize db:seed
+ 1463  cd backend/
+ 1464  npx dotenv -- sequelize db:seed
+ 1465  npx dotenv -- sequelize db:seed:all
+ 1466  npx dotenv -- sequelize db:seed:undo:all
+ 1467  psql
+ 1468  npx dotenv -- sequelize db:migrate
+ 1469  npx dotenv -- sequelize db:seed:all
+ 1470  npx dotenv -- sequelize db:migrate:undo
+ 1471  npx dotenv -- sequelize db:migrate:undo:all
+ 1472  npx dotenv -- sequelize db:migrate
+ 1473  npx dotenv -- sequelize db:seed:all
+ 1474  npx dotenv -- sequelize db:migrate:undo:all
+ 1475  npx dotenv -- sequelize db:migrat
+ 1476  npx dotenv -- sequelize db:migrate
+ 1477  npx dotenv -- sequelize db:seed:all
+ 1478  npx dotenv -- sequelize db:migrate:undo:all
+ 1479  npx dotenv -- sequelize db:migrate
+ 1480  npx dotenv -- sequelize db:seed:all
+ 1481  psql
+ 1482  npx dotenv -- sequelize db:migrate
+ 1483  npx dotenv -- sequelize db:seed:all
+ 1484  npm start
+ 1485  cd ..
+ 1486  git status
+ 1487  git add .
+ 1488  git commit -m 'seeders and migrations done'
+ 1489  git push
+ 1490  npm start
+ 1491  git status
+ 1492  git add .
+ 1493  git commit -m 'units page done'
+ 1494  git push
+ 1495  npm start
+ 1496  git add .
+ 1497  git commit -m 'get all leases for property query done, some work done on properties page'
+ 1498  git push
+ 1499  npm start
+ 1500  cd backend/
+ 1501  npx dotenv db:migrate:undo:all
+ 1502  npx dotenv sequelize db:migrate:undo:all
+ 1503  npx dotenv sequelize db:migrate
+ 1504  npx dotenv sequelize db:migrate:undo
+ 1505  npx dotenv sequelize db:migrate
+ 1506  npx dotenv sequelize db:migrate:undo
+ 1507  psql
+ 1508  npx dotenv sequelize db:migrate
+ 1509  npx dotenv sequelize db:seed:all
+ 1510  psql
+ 1511  npx dotenv sequelize db:migrate
+ 1512  npx dotenv sequelize db:seed:all
+ 1513  npm start
+ 1514  cd ..
+ 1515  git add .
+ 1516  git commit -m 'adjusted migrations'
+ 1517  git push
+ 1518  npm start
+ 1519  git status
+ 1520  git add .
+ 1521  git commit -m 'some tenant data.
+ 1522  '
+ 1523  git push
+ 1524  npm start
+ 1525  psql
+ 1526  npx dotenv sequelize db:migrate
+ 1527  cd backend/
+ 1528  npx dotenv sequelize db:migrate
+ 1529  psql
+ 1530  npx dotenv sequelize db:migrate
+ 1531  npx dotenv sequelize db:seed:all
+ 1532  psql
+ 1533  npx dotenv sequelize db:migrate
+ 1534  npx dotenv sequelize db:seed:all
+ 1535  cd ..
+ 1536  npm start
+ 1537  psql
+ 1538  npx dotenv sequelize db:migrate
+ 1539  cd backend/
+ 1540  npx dotenv sequelize db:migrate
+ 1541  npx dotenv sequelize db:seed:all
+ 1542  cd ..
+ 1543  npm start
+ 1544  git status
+ 1545  git add .
+ 1546  git commit -m 'properties form'
+ 1547  git push\
+ 1548  git push
+ 1549  npm start
+ 1550  git add .
+ 1551  git commit -m 'new tenant application'
+ 1552  git push
+ 1553  npm start
+ 1554  npm sart
+ 1555  npm start
+ 1556  git add .
+ 1557  git status
+ 1558  git commit -m 'lease form on page'
+ 1559  heroku create
+ 1560  git push heroku
+ 1561  git branch
+ 1562  ls
+ 1563  heroku logs --tail
+ 1564  git add .
+ 1565  git commit -m 'deploy test'
+ 1566  git push heroku
+ 1567  heroku logs --tail
+ 1568  heroku run npm run sequelize db:migrate
+ 1569  heroku run npm run --prefix backend sequelize db:migrate
+ 1570  git status
+ 1571  git push heroku master
+ 1572  heroku run npm run --prefix backend sequelize db:migrate
+ 1573  git status
+ 1574  git add .
+ 1575  git commit -m 'another deploy test'
+ 1576  git push heroku master
+ 1577  heroku run npm run --prefix backend sequelize db:migrate
+ 1578  git add .
+ 1579  git commit -m 'try deploy again'
+ 1580  git push heroku master
+ 1581  heroku run npm run --prefix backend sequelize db:migrate
+ 1582  git add .
+ 1583  git commit -m 'try deploy again'
+ 1584  git push heroku master
+ 1585  heroku run npm run --prefix backend sequelize db:migrate
+ 1586  git status
+ 1587  git add .
+ 1588  git commit -m 'another deploy'
+ 1589  git push heroku master
+ 1590  heroku run npm run --prefix backend sequelize db:migrate
+ 1591  heroku logs --tail
+ 1592  heroku run npm run --prefix backend sequelize db:migrate
+ 1593  git add .
+ 1594  git commit -m 'deploy again'
+ 1595  git status
+ 1596  git push heroku master
+ 1597  heroku run npm run --prefix backend sequelize db:migrate
+ 1598  heroku run npm run --prefix backend sequelize db:seed:all
+ 1599  npm start
+ 1600  git add .A
+ 1601  git commit -m 'styled some forms'
+ 1602  git push origin master
+ 1603  git push heroku
+ 1604  npm start
+ 1605  git status
+ 1606  git add .
+ 1607  git commit -m 'lease form implemented but buggy'
+ 1608  git push origin master
+ 1609  npm start
+ 1610  git push heroku
+ 1611  npm start
+ 1612  git add .
+ 1613  git commit -m 'leases form working'
+ 1614  git push origin master
+ 1615  psql
+ 1616  npx dotenv sequelize db:migrate
+ 1617  cd backend/
+ 1618  npx dotenv sequelize db:migrate
+ 1619  npx dotenv -- sequelize db:migrate
+ 1620  npx dotenv sequelize db:migrate
+ 1621  npx --  dotenv sequelize db:migrate
+ 1622  npx dotenv -- sequelize db:migrate
+ 1623  npx sequelize db:migrate
+ 1624  npx dotenv -- sequelize db:migrate
+ 1625  npx dotenv -- sequelize db:migrate:undo:all
+ 1626  npx dotenv -- sequelize db:migrate
+ 1627  npx dotenv -- sequelize db:seed:all
+ 1628  psql
+ 1629  npx dotenv -- sequelize db:migrate
+ 1630  npx dotenv -- sequelize db:seed:all
+ 1631  npx dotenv -- sequelize db:migrate:undo:all
+ 1632  npx dotenv -- sequelize db:migrate
+ 1633  npx dotenv -- sequelize db:seed:all
+ 1634  psql
+ 1635  npx dotenv -- sequelize db:migrate
+ 1636  npx dotenv -- sequelize db:seed:all
+ 1637  psql
+ 1638  npx dotenv -- sequelize db:migrate
+ 1639  npx dotenv -- sequelize db:seed:all
+ 1640  psql
+ 1641  npx dotenv -- sequelize db:migrate
+ 1642  npx dotenv -- sequelize db:seed:all
+ 1643  psql
+ 1644  npx dotenv -- sequelize db:migrate
+ 1645  npx dotenv -- sequelize db:seed:all
+ 1646  psql
+ 1647  npx dotenv -- sequelize db:migrate
+ 1648  npx dotenv -- sequelize db:seed:all
+ 1649  cd ..
+ 1650  npm start
+ 1651  git add .
+ 1652  git commit -m 'got some maths going'
+ 1653  git push origin master
+ 1654  git push heoku
+ 1655  git push heroku
+ 1656  heroku run npm run --prefix backend sequelize db:migrate
+ 1657  heroku run npm run --prefix backend sequelize db:seed:all
+ 1658  npm start
+ 1659  ls
+ 1660  npm start
+ 1661  cd ..
+ 1662  ls
+ 1663  cd w20
+ 1664  ls
+ 1665  cd Photeria/
+ 1666  ls
+ 1667  cd react-app/
+ 1668  ls
+ 1669  code .
+ 1670  cd ..
+ 1671  cd capstone/
+ 1672  ls
+ 1673  cd authenticate-me-sequelize-5/
+ 1674  ls
+ 1675  cd frontend/
+ 1676  ls
+ 1677  npm install react-images-uploading
+ 1678  npm start
+ 1679  git add .
+ 1680  git commit -m 'image upload for properties complete'
+ 1681  git push origin master
+ 1682  npm start
+ 1683  git add .
+ 1684  git commit -m 'properties route now creates units'
+ 1685  git push origin master
+ 1686  npm start
+ 1687  cd frontend/
+ 1688  cd fr
+ 1689  ls
+ 1690  npm install --save react-alert
+ 1691  cd ..
+ 1692  npm start
+ 1693  cd frontend/
+ 1694  npm start
+ 1695  cd ..
+ 1696  npm start
+ 1697  cd frontend/
+ 1698  npm install --save react-spinners
+ 1699  cd ..
+ 1700  npm start
+ 1701  git add .
+ 1702  git commit -m 'user experience features'
+ 1703  git branch new-feature
+ 1704  git branch
+ 1705  git checkout new-feature 
+ 1706  git push origin
+ 1707  git push --set-upstream origin new-feature
+ 1708  npm star
+ 1709  npm start
+ 1710  cd ..
+ 1711  cd w15
+ 1712  ls
+ 1713  cd tryagain/
+ 1714  ls
+ 1715  cd auth-front-end/
+ 1716  ls
+ 1717  code .
+ 1718  ls
+ 1719  npx dotenv sequelize db:migrate:undo
+ 1720  npx dotenv sequelize db:migrate
+ 1721  npm start
+ 1722  npx dotenv sequelize db:migrate:undo
+ 1723  npx sequelize db:migrate:undo
+ 1724  npx dotenv sequelize db:migrate:undo
+ 1725  npx dotenv sequelize db:migrate:undo:all
+ 1726  npx dotenv sequelize db:migrate
+ 1727  npx dotenv sequelize db:seed:all
+ 1728  npx dotenv sequelize db:seed
+ 1729  npx dotenv sequelize db:seed:all
+ 1730  npx -- dotenv sequelize db:seed:all
+ 1731  npx dotenv -- sequelize db:seed:all
+ 1732  npx dotenv sequelize db:seed:all
+ 1733  npx sequelize db:seed:all
+ 1734  npx dontenv sequelize db:seed:all
+ 1735  npx dotenv sequelize db:seed:all
+ 1736  ls
+ 1737  npx dotenv sequelize db:seed:all -- /seeders
+ 1738  npx dotenv sequelize db:seed:all -- ./seeders
+ 1739  npx dotenv sequelize db:seed:all -- ./db/seeders
+ 1740  ls
+ 1741  la
+ 1742  npx dotenv sequelize db:seed:undo:all
+ 1743  npx dotenv sequelize db:seed:all
+ 1744  npm start
+ 1745  npx dotenv sequelize db:seed:undo:all
+ 1746  npx dotenv sequelize db:seed:all
+ 1747  npx dotenv sequelize db:seed:undo:all
+ 1748  npx dotenv sequelize db:migrate:undo
+ 1749  npx dotenv sequelize db:migrate
+ 1750  npx dotenv sequelize db:seed:all
+ 1751  psql
+ 1752  npx dotenv sequelize db:migrate
+ 1753  npx dotenv sequelize db:seed:all
+ 1754  npm start
+ 1755  git add .
+ 1756  git status
+ 1757  git commit -m 'poems now read better, changed seeds'
+ 1758  git push origin
+ 1759  git push heroku
+ 1760  log
+ 1761  history
+ 1762  npx dotenv sequelize db:seed:undo:all
+ 1763  npx dotenv sequelize db:seed:all
+ 1764  git pull origin master
+ 1765  git pull origin
+ 1766  npm start
+ 1767  postgres
+ 1768  psql
+ 1769  npx dotenv sequelize db:migreate
+ 1770  npx dotenv sequelize db:migrate
+ 1771  npx dotenv sequelize db:seed:all
+ 1772  npm start
+ 1773  npm startr
+ 1774  npm start
+ 1775  git add .
+ 1776  git commit -m 'fixed pug file'
+ 1777  git push heroku
+ 1778  npm start
+ 1779  git add .
+ 1780  git commit -m 'fixed user page'
+ 1781  git push heroku
+ 1782  cd ..
+ 1783  cd w13
+ 1784  ls
+ 1785  cd medium-clone/
+ 1786  ls
+ 1787  npm start
+ 1788  cd ..
+ 1789  cd s13
+ 1790  cd w13
+ 1791  ls
+ 1792  cd medium-clone/
+ 1793  ls
+ 1794  code .
+ 1795  cd AppAcademy/capstone/authenticate-me-sequelize-5/
+ 1796  cd backend/
+ 1797  npx dotenv sequelize seed:generate --name seed-properties
+ 1798  npx dotenv sequelize -- seed:generate --name seed-properties
+ 1799  npx dotenv sequelize -- seed:generate --name seed-tenants
+ 1800  npx dotenv sequelize -- seed:generate --name seed-units
+ 1801  npx dotenv sequelize -- seed:generate --name seed-unit-photos
+ 1802  npx dotenv sequelize -- seed:generate --name seed-leases
+ 1803  npx dotenv sequelize -- seed:generate --name seed-property-features
+ 1804  npx dotenv sequelize -- seed:generate --name seed-vendor-types
+ 1805  npx dotenv sequelize -- seed:generate --name seed-vendors
+ 1806  npx dotenv sequelize -- seed:generate --name seed-property-purchase
+ 1807  npx dotenv sequelize -- seed:generate --name seed-unit-purchases
+ 1808  cd ..
+ 1809  code .
+ 1810  cd frontend/
+ 1811  ls
+ 1812  npm start
+ 1813  cd ..
+ 1814  ls
+ 1815  cd w15
+ 1816  ls
+ 1817  cd tryagain/
+ 1818  git remote show origin
+ 1819  ls
+ 1820  code .
+ 1821  cd ..
+ 1822  cd capstone/
+ 1823  ls
+ 1824  cd authenticate-me-sequelize-5/
+ 1825  ls
+ 1826  cd frontend/
+ 1827  npm start
+ 1828  cd ..
+ 1829  cd 515
+ 1830  cd w15
+ 1831  ls
+ 1832  cd tryagain/
+ 1833  ls
+ 1834  cd auth-front-end/
+ 1835  npm start
+ 1836  cd ..
+ 1837  cd capstone/
+ 1838  ls
+ 1839  cd authenticate-me-sequelize-5/
+ 1840  ls
+ 1841  cd frontend/
+ 1842  npm start
+ 1843  killall node
+ 1844  npm start
+ 1845  killall node
+ 1846  cd ..
+ 1847  code .
+ 1848  cd frontend/
+ 1849  npm start
+ 1850  cd ..
+ 1851  code .
+ 1852  cd frontend/
+ 1853  npm start
+ 1854  killall node
+ 1855  cd ..
+ 1856  code .
+ 1857  cd frontend/
+ 1858  npm start
+ 1859  cd ..
+ 1860  code .
+ 1861  cd frontend/
+ 1862  npm start
+ 1863  cd ,,
+ 1864  cd ..
+ 1865  ls
+ 1866  cd w18
+ 1867  ls
+ 1868  cd ..
+ 1869  ls
+ 1870  cd w20
+ 1871  ls
+ 1872  cd Photeria/
+ 1873  ls
+ 1874  git status
+ 1875  git branch
+ 1876  git pull
+ 1877  pipenv run flask run
+ 1878  clear
+ 1879  git add .
+ 1880  git commit -m 'fixed adding properties state and property features state'
+ 1881  git push
+ 1882  npm start
+ 1883  git status
+ 1884  git add .
+ 1885  git commit -m 'fixed units form to allow changes'
+ 1886  git push
+ 1887  npm start
+ 1888  git add .
+ 1889  git commit -m 'calculating expenses'
+ 1890  git push
+ 1891  npm start
+ 1892  cd frontend/
+ 1893  npm install react-calendar
+ 1894  cd ..
+ 1895  npm start
+ 1896  cd frontend/
+ 1897  npm install react-date-picker
+ 1898  cd ,,
+ 1899  cd ..
+ 1900  npm start
+ 1901  git add .
+ 1902  git commit -m 'purchases works, state needs to be fixed'
+ 1903  git push
+ 1904  npm start
+ 1905  cd frontend/
+ 1906  npm install react-table --save
+ 1907  cd ..
+ 1908  npm start
+ 1909  git add .
+ 1910  git commit -m 'awesome searchable table'
+ 1911  git push
+ 1912  npm start
+ 1913  git add .
+ 1914  git commit -m 'table in tenants page'
+ 1915  npm start
+ 1916  git add .
+ 1917  git commit -m 'table on leases page done'
+ 1918  git push
+ 1919  npm start
+ 1920  git add .
+ 1921  git commit -m 'purchases page complete'
+ 1922  git push
+ 1923  npm start
+ 1924  git add .
+ 1925  git commit -m 'edit units values'
+ 1926  git push
+ 1927  npm start
+ 1928  git add .
+ 1929  git commit -m 'fixed unit updating'
+ 1930  git push
+ 1931  npm start
+ 1932  cd frontend/
+ 1933  npm install date-fns
+ 1934  cd ..
+ 1935  npm start
+ 1936  git add .
+ 1937  git commit -m 'property feature saving'
+ 1938  git push
+ 1939  git checkout master
+ 1940  git pull
+ 1941  npm start
+ 1942  git push heroku
+ 1943  npm start
+ 1944  git add .
+ 1945  git commit -m 'added demo user'
+ 1946  git push
+ 1947  git push heroku
+ 1948  cd AppAcademy/capstone/authenticate-me-sequelize-5/
+ 1949  code .
+ 1950  ls
+ 1951  cd frontend/
+ 1952  ls
+ 1953  npm start
+ 1954  killall node
+ 1955  cd ..
+ 1956  code .
+ 1957  cd frontend/
+ 1958  npm start
+ 1959  killall node
+ 1960  cd ..
+ 1961  code .
+ 1962  cd frontend/
+ 1963  npm start
+ 1964  git add .
+ 1965  git commit-m 'vendors page up'
+ 1966  git commit -m 'vendors page up'
+ 1967  git push
+ 1968  npm start
+ 1969  git add .
+ 1970  git commit -m 'added purchases table to properties page'
+ 1971  git push
+ 1972  npm start
+ 1973  git add .
+ 1974  git commit -m 'some css'
+ 1975  git push
+ 1976  git push heroku
+ 1977  npm start
+ 1978  cd ..
+ 1979  mkdir whiteboarding
+ 1980  cd whiteboarding/
+ 1981  touch product_array.js
+ 1982  code product_array.js 
+ 1983  node product_array.js 
+ 1984  clear
+ 1985  node product_array.js 
+ 1986  cd ..
+ 1987  cd capstone/
+ 1988  ls
+ 1989  cd authenticate-me-sequelize-5/
+ 1990  ls
+ 1991  npm start
+ 1992  cd frontend/
+ 1993  npm start
+ 1994  cd ..
+ 1995  git add .
+ 1996  git commit -m 'latest;
+ 1997  '
+ 1998  git push heroku
+ 1999  ls
+ 2000  npm start
+ 2001  git add .
+ 2002  git commit -m 'footer and favicon added'
+ 2003  git push
+ 2004  git push heroku
+ 2005  npx sequelize generate:seed -name Likes
+ 2006  npx sequelize seed:generate -name Likes
+ 2007  npx sequelize seed:generate --name Likes
+ 2008  npx sequelize seed:generate --name Follows
+ 2009  npx sequelize seed:generate --name Comments
+ 2010  psql
+ 2011  npx - sequelize:db
+ 2012  historu
+ 2013  history
+ 2014  history > npx
