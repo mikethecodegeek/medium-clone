@@ -2,7 +2,7 @@
 
 Is a full-stack application that seeks to clone the medium.com experience.
 
-As more people are trying to find a way to show their poetic
+As more people are trying to find a way to show their poetic sides, poedium aims to fulfill their request!
 
 More information can be found on this project at it's [Wiki](https://github.com/mikethecodegeek/medium-clone/wiki)
 
