@@ -28,7 +28,7 @@ module.exports = {
                     I care not though it perish
                     With a thought I then did cherish.`,
                     title: 'Imitation',
-                    userId: 1,
+                    userId: 2,
                     imgLink: 'dummy',
                     createdAt: new Date(),
                     updatedAt: new Date(),
@@ -75,7 +75,7 @@ module.exports = {
                     the crow Bijou ceased to beseech.
                    `,
                     title: 'Imitation',
-                    userId: 1,
+                    userId: 2,
                     imgLink: 'dummy',
                     createdAt: new Date(),
                     updatedAt: new Date(),

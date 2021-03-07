@@ -4,19 +4,20 @@ window.addEventListener('DOMContentLoaded', (e) => {
     // homeButton.addEventListener('click', () => {
     //     window.location = 'http://localhost:8080';
     // });
-
+    let modal = document.querySelector('.modal')
+    console.log(modal)
     let commentButton = document.querySelector('.comment-button');
     let article = document.querySelector('.singleArticle');
     let articleTitle = document.querySelector('.article-title-single');
     let newCommentBox = document.querySelector('.newcomment');
-    console.log(newCommentBox)
+    // console.log(newCommentBox)
     let allComments = document.querySelector('.comments');
 
     let userName = document.querySelector('.username');
     let day = new Date().getDate();
     let month = new Date().getMonth();
     month++;
-    console.log(month)
+    // console.log(month)
 
     let year = new Date().getFullYear();
     let dateShown = `${month}/${day}/${year}`;
@@ -37,6 +38,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
     commentButton.addEventListener('click', (e) => {
         newCommentBox.classList.toggle('hidden');
     });
+
+    
 
     newCommentBox.addEventListener('click', async (e) => {
         // console.log(e.target.textContent)
@@ -131,6 +134,8 @@ window.addEventListener('DOMContentLoaded', (e) => {
             res.json();
         });
     });
+
+
 
     // async function follow() {
     //     const followButton = document.querySelector('.user-follow-button');

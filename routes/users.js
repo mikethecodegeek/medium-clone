@@ -121,7 +121,7 @@ router.post(
 );
 
 router.get('/login', csrfProtection, (req, res) => {
-    res.render('login', { csrfToken: req.csrfToken(), userName: '' });
+    res.render('login', { csrfToken: req.csrfToken(), userName: ''});
 });
 
 const loginValidators = [

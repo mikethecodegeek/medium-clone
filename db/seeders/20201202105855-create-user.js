@@ -1,10 +1,32 @@
 'use strict';
+const bcrypt = require('bcrypt');
 
+const hash = async(password) => {
+    const hashed = await bcrypt.hash(password, 10)
+    try {
+        return hashed
+    }
+    finally{
+        console.log(hashed)
+    }
+    
+    
+    return  hashed
+}
 module.exports = {
-    up: (queryInterface, Sequelize) => {
+    up: async (queryInterface, Sequelize) => {
         return queryInterface.bulkInsert(
             'Users',
             [
+                {
+                    firstName: 'Demo',
+                    lastName: 'User',
+                    userName: 'Demo_User',
+                    email: 'demo@poedium.com',
+                    hashedPassword: await bcrypt.hash('password', 10),
+                    createdAt: new Date(),
+                    updatedAt: new Date(),
+                },
                 {
                     firstName: 'Ed',
                     lastName: 'Allen',
