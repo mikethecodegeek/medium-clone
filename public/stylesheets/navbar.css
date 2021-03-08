@@ -59,9 +59,9 @@ div {
 }
 
 .modal {
-    position: fixed; /* Stay in place */
+    position: absolute;
+    top: 0px;
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
   
     width: 100%; /* Full width */
     height: 100%; /* Full height */
@@ -78,6 +78,8 @@ div {
     border: 1px solid #888;
     width: 80%;
     max-width: 400px;
+    position: relative;
+    top:calc(50% - 200px);
 }
 
 .modalTitle {
@@ -219,6 +221,10 @@ div {
     align-content: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
 }
 
 .footer > div> a {

@@ -1,3 +1,20 @@
 h1 {
     color: #555555;
 }
+
+.poe-quote {
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.img-cont {
+    display: flex;
+}
+
+.articles-cont {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+
