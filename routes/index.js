@@ -14,7 +14,7 @@ router.get(
             },
             limit: 6,
             include: User,
-            order:[ [ sequelize.fn('RANDOM') ] ]
+            // order:[ [ sequelize.fn('RANDOM') ] ]
         });
         let following;
         if (req.session.auth) {

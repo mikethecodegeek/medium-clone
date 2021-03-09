@@ -114,7 +114,7 @@ module.exports = {
 
                     the crow Bijou ceased to beseech.
                    `,
-                    title: 'Imitation',
+                    title: 'Alone',
                     userId: 2,
                     imgLink: 'dummy',
                     createdAt: new Date(),
