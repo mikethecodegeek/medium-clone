@@ -18,11 +18,12 @@ block content
     img(class= 'poe-quote' src='../images/poe-quote.jpg')    
   div(class="trending container") 
     if following
-      h2(class="trending-title") <i class="fas fa-user-friends"></i> LATEST FROM FOLLOWING
-      div(class="articles-div mb-40")
-        each follow in following, i
-          div(class="trending-article-box")
-               a(href=`/users/${follow.User.id}` class="trending-article-name following-name") #{follow.User.userName}
+      div(class='articles-cont')
+        h2(class="trending-title") <i class="fas fa-user-friends"></i> LATEST FROM FOLLOWING
+        div(class="articles-div mb-40")
+          each follow in following, i
+            div(class="trending-article-box")
+                a(href=`/users/${follow.User.id}` class="trending-article-name following-name") #{follow.User.userName}
           //- p=follow.User.userName
     h2(class="trending-title") <i class="far fa-arrow-alt-circle-down"></i> TRENDING ON POEDIUM
     div(class='articles-cont')

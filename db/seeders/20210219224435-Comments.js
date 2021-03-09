@@ -1,5 +1,5 @@
 'use strict';
-
+const faker = require('faker')
 module.exports = {
   up: (queryInterface, Sequelize) => {
     /*
@@ -12,6 +12,9 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+      const comments = [];
+      
+
      return queryInterface.bulkInsert('Comments', 
        [
          {userId:2, articleId: 1, body: 'Amazing Poem', createdAt: new Date(), updatedAt: new Date()},

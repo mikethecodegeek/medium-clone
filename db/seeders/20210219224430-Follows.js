@@ -12,32 +12,27 @@ module.exports = {
         isBetaMember: false
       }], {});
     */
+      const follows = [];
+
+      for (let a = 1; a<58;a++) {
+        const rand= Math.floor(Math.random() * 5) + 1
+        const rand2= Math.floor(Math.random() * 5) + 1
+        // console.log('followss---------',rand)
+          for (let b=rand; b<58;b+=rand2) {
+            // console.log('follows count------',b)
+            const follow = {
+              userId:a,
+              followerId:b,
+              createdAt: new Date(), 
+              updatedAt: new Date()
+            }
+            follows.push(follow)
+          }
+      }
+
      return queryInterface.bulkInsert('FollowingUsers', 
        [
-         {userId:1, followerId:2, createdAt: new Date(), updatedAt: new Date()},
-         {userId:1, followerId:3, createdAt: new Date(), updatedAt: new Date()},
-         {userId:1, followerId:4, createdAt: new Date(), updatedAt: new Date()},
-         {userId:1, followerId:5, createdAt: new Date(), updatedAt: new Date()},
-         {userId:2, followerId:4, createdAt: new Date(), updatedAt: new Date()},
-         {userId:2, followerId:6, createdAt: new Date(), updatedAt: new Date()},
-         {userId:2, followerId:7, createdAt: new Date(), updatedAt: new Date()},
-         {userId:3, followerId:1, createdAt: new Date(), updatedAt: new Date()},
-         {userId:3, followerId:4, createdAt: new Date(), updatedAt: new Date()},
-         {userId:3, followerId:6, createdAt: new Date(), updatedAt: new Date()},
-         {userId:4, followerId:5, createdAt: new Date(), updatedAt: new Date()},
-         {userId:4, followerId:6, createdAt: new Date(), updatedAt: new Date()},
-         {userId:4, followerId:7, createdAt: new Date(), updatedAt: new Date()},
-         {userId:5, followerId:1, createdAt: new Date(), updatedAt: new Date()},
-         {userId:5, followerId:2, createdAt: new Date(), updatedAt: new Date()},
-         {userId:5, followerId:6, createdAt: new Date(), updatedAt: new Date()},
-         {userId:5, followerId:7, createdAt: new Date(), updatedAt: new Date()},
-         {userId:6, followerId:1, createdAt: new Date(), updatedAt: new Date()},
-         {userId:6, followerId:3, createdAt: new Date(), updatedAt: new Date()},
-         {userId:6, followerId:5, createdAt: new Date(), updatedAt: new Date()},
-         {userId:6, followerId:7, createdAt: new Date(), updatedAt: new Date()},
-         {userId:7, followerId:1, createdAt: new Date(), updatedAt: new Date()},
-         {userId:7, followerId:2, createdAt: new Date(), updatedAt: new Date()},
-         {userId:7, followerId:6, createdAt: new Date(), updatedAt: new Date()},
+        ...follows
        ], {});
   },
 

@@ -91,6 +91,8 @@
 .article-body-single {
   line-height: 1.5;
   font-size: 1.4rem;
+  text-align: center;
+  white-space: pre-line;
 }
 
 .edit-article-button {
@@ -156,6 +158,7 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 150px;
 }
 
 .black-outline {
@@ -285,4 +288,8 @@
   margin-left: 20px;
   font-size: 0.9rem;
   font-style: italic;
+}
+
+.align-left {
+  text-align: left;
 }

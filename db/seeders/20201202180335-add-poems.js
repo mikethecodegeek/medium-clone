@@ -1,10 +1,50 @@
 'use strict';
+const faker = require('faker')
+
+const poems = [];
+
+const gen_paragraph = () => {
+  let str = ''
+  for (let a=0; a<3; a++) {
+    str += faker.lorem.paragraph(5);
+    str += '\n\n'
+
+  }
+  return str
+}
+
+for (let a=0; a<25;a++) {
+  const poem = {
+    body: gen_paragraph(),
+    title: faker.lorem.sentence(1),
+    userId:1,
+    imgLink: 'dummy',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+  poems.push(poem)
+}
+
+for (let a=0; a<15;a++) {
+  for (let b=9; b<58;b++) {
+
+    const poem = {
+      body: gen_paragraph(),
+      title: faker.lorem.sentence(1),
+      userId:b,
+      imgLink: 'dummy',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    }
+    poems.push(poem)
+  }
+}
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
         return queryInterface.bulkInsert(
             'Articles',
-            [
+            [  
                 {
                     body: `
                     A dark unfathomed tide
@@ -365,6 +405,7 @@ module.exports = {
                     createdAt: new Date(),
                     updatedAt: new Date(),
                 },
+                ...poems
             ],
             {}
         );
