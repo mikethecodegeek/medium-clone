@@ -11,7 +11,7 @@ block content
     
     p
       a(class='article-author-single' href=`/users/${article.User.id}`) #{article.User.firstName} #{article.User.lastName}
-      span(class='article-author-single-date')='' + moment(article.createdAt).format("DD/MM/YYYY") + ''
+      span(class='article-author-single-date')='' + moment(article.createdAt).format("MM/DD/YYYY") + ''
     
     div(class='article-text')
       pre(class='article-body-single')= article.body

@@ -13,7 +13,29 @@ module.exports = {
       }], {});
     */
       const comments = [];
-      
+      for (let a=2;a<58;a++) {
+        const rand= Math.floor(Math.random() * 3) + 1
+
+        for (let b=8;b<=33;b+=rand) {
+          let comment = {
+            userId:a, articleId: b, body: faker.lorem.sentence(6), createdAt: faker.date.between('1-1-2020','3-1-2021'), updatedAt: new Date()
+          }
+          comments.push(comment)
+        }
+      }
+
+      for (let a=1;a<59;a++) {
+        const rand= Math.floor(Math.random() * 5) + 1
+        const rand2= Math.floor(Math.random() * 7) + 1
+        for (let b=rand;b<=767;b+=rand2) {
+          let comment = {
+            userId:a, articleId: b, body: faker.lorem.sentence(6), createdAt: faker.date.between('1-1-2020','3-1-2021'), updatedAt: new Date()
+          }
+          comments.push(comment)
+        }
+      }
+
+
 
      return queryInterface.bulkInsert('Comments', 
        [
@@ -55,6 +77,7 @@ module.exports = {
          {userId:2, articleId: 7, body: 'Incredible!', createdAt: new Date(), updatedAt: new Date()},
          {userId:3, articleId: 7, body: 'WOW!', createdAt: new Date(), updatedAt: new Date()},
          {userId:7, articleId: 7, body: 'I love this poem', createdAt: new Date(), updatedAt: new Date()},
+         ...comments,
        ], {});
   },
 

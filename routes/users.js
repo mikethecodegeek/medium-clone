@@ -218,7 +218,7 @@ router.get(
     '/:id/articles',
     csrfProtection,
     asyncHandler(async (req, res) => {
-        const user = await User.findByPk(req.params.id, { include: Article });
+        const user = await User.findByPk(req.params.id, { include: Article, order:['createdAt','DESC'] });
         const articles = user.Articles.map((article) => {
             return { title: article.title, body: article.body };
         });

@@ -19,7 +19,7 @@ for (let a=0; a<25;a++) {
     title: faker.lorem.sentence(1),
     userId:1,
     imgLink: 'dummy',
-    createdAt: new Date(),
+    createdAt: faker.date.between('1-1-2020','3-1-2021'),
     updatedAt: new Date(),
   }
   poems.push(poem)

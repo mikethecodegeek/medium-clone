@@ -1,5 +1,5 @@
 'use strict';
-
+const faker=require('faker')
 module.exports = {
   up: (queryInterface, Sequelize) => {
     /*
@@ -23,7 +23,7 @@ module.exports = {
           const like = {
             userId:a,
             articleId:b,
-            createdAt: new Date(), 
+            createdAt: faker.date.between('1-1-2020','3-1-2021'), 
             updatedAt: new Date()
           }
           likes.push(like)
