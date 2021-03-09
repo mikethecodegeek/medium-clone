@@ -44,7 +44,8 @@ doctype html
       div(class="navbar")
         div 
           a(href="/" class="logo") <i class="fas fa-crow"></i> Poedium
-        div(class="greeting lg-only") Hello #{session.auth.userName}
+        a(href=`/users/${session.auth.userId}` class="nav_user" )  
+          div(class="greeting lg-only") Hello #{session.auth.userName}
         div(class="navlinks")
           ul
             //- li(class="lg-only") Our Story

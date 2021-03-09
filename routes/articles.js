@@ -38,6 +38,7 @@ router.get(
                 userName: comm.User.userName,
                 articleId: comm.articleId,
                 body: comm.body,
+                createdAt: comm.createdAt
             };
         });
 

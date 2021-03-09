@@ -47,5 +47,6 @@ block content
           p(class='commentbody')=comment.body 
           p(class='commentauthor')=comment.userName
           span(class='commentdate')='' + moment(comment.createdAt).format("MM/DD/YYYY") + ''
+          
   
   script(src="/javascripts/index.js")
