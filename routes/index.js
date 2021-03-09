@@ -10,7 +10,7 @@ router.get(
     asyncHandler(async (req, res, next) => {
         const articles = await Article.findAll({
             where: {
-                id: { [Op.gt]: 50 }
+                id: { [Op.lt]: 8 }
             },
             limit: 6,
             include: User,
