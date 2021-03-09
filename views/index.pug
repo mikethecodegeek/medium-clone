@@ -34,4 +34,4 @@ block content
             div(class="trending-article-box")
               a(href=`/users/${article.User.id}` class="trending-article-name") #{article.User.firstName} #{article.User.lastName}
               a(href=`/articles/${article.id}` class="trending-article-title")=article.title
-              p(class="trending-article-date") Dec 7 · #{article.id} min read
+              p(class="trending-article-date") Dec 7 · #{Math.floor(Math.random()*6)+1} min read
