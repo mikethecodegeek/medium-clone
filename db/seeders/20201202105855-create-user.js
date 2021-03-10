@@ -15,7 +15,7 @@ const hash = async(password) => {
 }
 
 const users = [];
-for (let a=0; a<50;a++) {
+for (let a=0; a<10;a++) {
     const user = {
         firstName: faker.name.firstName(),
         lastName: faker.name.lastName(),

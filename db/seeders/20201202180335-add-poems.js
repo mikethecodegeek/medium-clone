@@ -26,7 +26,7 @@ for (let a=0; a<25;a++) {
 }
 
 for (let a=0; a<15;a++) {
-  for (let b=9; b<58;b++) {
+  for (let b=9; b<18;b++) {
 
     const poem = {
       body: gen_paragraph(),

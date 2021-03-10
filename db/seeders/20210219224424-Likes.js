@@ -14,11 +14,11 @@ module.exports = {
     */
     const likes = [];
 
-    for (let a = 1; a<58;a++) {
+    for (let a = 1; a<18;a++) {
       const rand= Math.floor(Math.random() * 5) + 1
 
       // connsole.log('likes====',rand)
-        for (let b=1; b<767;b+=rand) {
+        for (let b=1; b<167;b+=rand) {
           // console.log('likes count------',b)
           const like = {
             userId:a,

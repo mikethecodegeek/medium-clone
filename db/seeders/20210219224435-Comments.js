@@ -13,7 +13,7 @@ module.exports = {
       }], {});
     */
       const comments = [];
-      for (let a=2;a<58;a++) {
+      for (let a=2;a<18;a++) {
         const rand= Math.floor(Math.random() * 3) + 1
 
         for (let b=8;b<=33;b+=rand) {
@@ -24,10 +24,10 @@ module.exports = {
         }
       }
 
-      for (let a=1;a<59;a++) {
-        const rand= Math.floor(Math.random() * 5) + 1
-        const rand2= Math.floor(Math.random() * 7) + 1
-        for (let b=rand;b<=767;b+=rand2) {
+      for (let a=1;a<19;a++) {
+        const rand= Math.floor(Math.random() * 3) + 1
+        const rand2= Math.floor(Math.random() * 5) + 1
+        for (let b=rand;b<=167;b+=rand2) {
           let comment = {
             userId:a, articleId: b, body: faker.lorem.sentence(6), createdAt: faker.date.between('1-1-2020','3-1-2021'), updatedAt: new Date()
           }

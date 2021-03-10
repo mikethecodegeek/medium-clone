@@ -14,11 +14,11 @@ module.exports = {
     */
       const follows = [];
 
-      for (let a = 1; a<58;a++) {
-        const rand= Math.floor(Math.random() * 5) + 1
-        const rand2= Math.floor(Math.random() * 5) + 1
+      for (let a = 1; a<18;a++) {
+        const rand= Math.floor(Math.random() * 3) + 1
+        const rand2= Math.floor(Math.random() * 3) + 1
         // console.log('followss---------',rand)
-          for (let b=rand; b<58;b+=rand2) {
+          for (let b=rand; b<18;b+=rand2) {
             // console.log('follows count------',b)
             const follow = {
               userId:a,
